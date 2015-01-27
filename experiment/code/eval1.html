@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+    <title>FOCC Contact Form</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script><style type="text/css"></style>
+            <script type="text/javascript" src="js/validation.js"></script>
+</head>
+
+<body>
+    
+    <form id="contact_form" method="post" action="php/process.php">
+        <fieldset>
+            <legend>Contact Details</legend>
+            <ol>
+                <li>
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text" class="text">
+                        </li>
+                <li>
+                    <label for="address">Postal Address:</label>
+                    <textarea id="address" name="address" rows="4" cols="30" class="text"></textarea>
+                </li>
+                <li>
+                    <label for="email">Email Address:</label>
+                    <input id="email" name="email" type="text" class="text">
+                        </li>
+                <li>
+                    <label for="phone_number">Home Phone Number:</label>
+                    <input id="phone_number" name="phone_number" type="text" class="text">
+                        </li>
+                <li>
+                    <label for="mobile_number">Mobile Phone Number:</label>
+                    <input id="mobile_number" name="mobile_number" type="text" class="text">
+                        </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Driving Licence</legend>
+            <ol>
+                <li>
+                    <label for="yes_drives">Yes</label>
+                    <input id="yes_drives" name="drives" type="radio" class="radio" value="yes">
+                        </li>
+                <li <label="" for="no_drives">No
+                    <input id="no_drives" name="drives" type="radio" class="radio" value="no">
+                        </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Age Range</legend>
+            <ol>
+                <li>
+                    <label for="18to21">18 - 21</label>
+                    <input id="18to21" name="age" type="radio" class="radio" value="18 - 21">
+                        </li>
+                <li>
+                    <label for="22to34">22 - 34</label>
+                    <input id="22to34" name="age" type="radio" class="radio" value="22 - 34">
+                        </li>
+                <li>
+                    <label for="35to49">35 - 49</label>
+                    <input id="35to49" name="age" type="radio" class="radio" value="35 - 49">
+                        </li>
+                <li>
+                    <label for="50to64">50 - 64</label>
+                    <input id="50to64" name="age" type="radio" class="radio" value="50 - 64">
+                        </li>
+                <li>
+                    <label for="65">65 +</label>
+                    <input id="65" name="age" type="radio" class="radio" value="65 +">
+                        </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>General Availability</legend>
+            <ol>
+                <li>
+                    <label for="any_time">Evenings or Weekends</label>
+                    <input id="any_time" name="general_availability" type="radio" class="radio" value="Evening or Weekends">
+                        </li>
+                <li>
+                    <label for="evenings">Evenings Only</label>
+                    <input id="evenings" name="general_availability" type="radio" class="radio" value="Evenings Only">
+                        </li>
+                <li>
+                    <label for="weekends">Weekends Only</label>
+                    <input id="weekends" name="general_availability" type="radio" class="radio" value="Weekends Only">
+                        </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Detailed Availability</legend>
+            <table>
+                <tbody><tr>
+                    <th></th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thur</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+                <tr>
+                    <th>Morning</th>
+                    <td><input type="checkbox" name="mon_morn" value="available"></td>
+                    <td><input type="checkbox" name="tue_morn" value="available"></td>
+                    <td><input type="checkbox" name="wed_morn" value="available"></td>
+                    <td><input type="checkbox" name="thur_morn" value="available"></td>
+                    <td><input type="checkbox" name="fri_morn" value="available"></td>
+                    <td><input type="checkbox" name="sat_morn" value="available"></td>
+                    <td><input type="checkbox" name="sun_morn" value="available"></td>
+                </tr>
+                <tr>
+                    <th>Afternoon</th>
+                    <td><input type="checkbox" name="mon_afternoon" value="available"></td>
+                    <td><input type="checkbox" name="tue_afternoon" value="available"></td>
+                    <td><input type="checkbox" name="wed_afternoon" value="available"></td>
+                    <td><input type="checkbox" name="thur_afternoon" value="available"></td>
+                    <td><input type="checkbox" name="fri_afternoon" value="available"></td>
+                    <td><input type="checkbox" name="sat_afternoon" value="available"></td>
+                    <td><input type="checkbox" name="sun_afternoon" value="available"></td>
+                </tr>
+                <tr>
+                    <th>Evening</th>
+                    <td><input type="checkbox" name="mon_evening" value="available"></td>
+                    <td><input type="checkbox" name="tue_evening" value="available"></td>
+                    <td><input type="checkbox" name="wed_evening" value="available"></td>
+                    <td><input type="checkbox" name="thur_evening" value="available"></td>
+                    <td><input type="checkbox" name="fri_evening" value="available"></td>
+                    <td><input type="checkbox" name="sat_evening" value="available"></td>
+                    <td><input type="checkbox" name="sun_evening" value="available"></td>
+                </tr>
+                </tbody></table>
+        </fieldset>
+        <fieldset class="submit">   
+            <input id="submit" type="submit" value="Submit Form" onclick="alert('thank you very much for your submission! ');">   
+                </fieldset>  
+    </form>
+    
+    
+    
+</body></html>

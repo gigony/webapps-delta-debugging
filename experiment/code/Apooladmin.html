@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "- //W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+      Apooladmin.html - tournament administration page for the teams comprising
+      the A pool of conpetitors
+      Author: Wayne Motycka
+      Date: Mar 25, 2008
+      CS464 Spring 08
+      HW 4
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="standings.css"/>
+<script type="text/javascript" src="./pooladmin.js"></script>
+<title>Tournament Administration - A Pool Teams</title>
+</head>
+<body onload="addhdr()">
+<h1>A Pool Teams Administration</h1>
+<form action="">
+<div class="centered" style="font-family: Veranda,Arial,sans-serif;">
+<br />
+<br />
+Team Number:<input type="text" id="tnumber" size="2" maxlength="2"/>
+Team Name:<input type="text" id="tname" size="25" maxlength="25"/>
+Team Web Page:<input type="text" id="tweb" size="30" />
+<br />
+<br />
+<input type="button" onclick="insRow()" value="Add Team"/>
+</div>
+<div class="centered">
+<br />
+<a href="./adminmain.xml">Tournament Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="tournament.xml">Tournament Main</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Bpooladmin.html">Pool B Teams Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Amatchesadmin.html">A Pool Match Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Bmatchesadmin.html">B Pool Match Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="finaladmin.html">Semi &amp; Final Administration</a>
+</div>
+</form>
+<div>
+<hr />
+</div>
+<h1>Match Pool A Teams</h1>
+<div style="font-size: 12pt; text-align: center; font-family: Veranda, Arial, sans-serif;">
+<table id="teamstbl" border="0" cellspacing="20px">
+<tr>
+<td class="teamlist">1</td>
+<td class="teamlist"><a href="team1.html">Pin Busters</a></td>
+<td>team1.xml</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td class="teamlist">2</td>
+<td class="teamlist"><a href="team2.html">Bill's Bullies</a></td>
+<td>team2.xml</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td class="teamlist">3</td>
+<td class="teamlist"><a href="team3.html">Strike Seekers</a></td>
+<td>team3.xml</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td class="teamlist">4</td>
+<td class="teamlist"><a href="team4.html">Underdogs</a></td>
+<td>team4.xml</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td class="teamlist">5</td>
+<td class="teamlist"><a href="team5.html">Cowpokes</a></td>
+<td>team5.xml</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td class="teamlist">6</td>
+<td class="teamlist"><a href="team6.html">Rounders</a></td>
+<td>team6.xml</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

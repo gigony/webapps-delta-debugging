@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    
+    <body>
+        <h1> Student Information Form </h1>
+        
+        <form action="">
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="lastname">
+       </form>
+        
+        <br>
+        </br>
+        
+        <form action="">
+            Username: <input type="text" name="Username"><br>
+           
+        </form>
+        
+        
+        <form>
+            Password: <input type="password" name="pwd">
+        </form>
+        
+        <br>
+        </br>
+        
+        <form>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female<br>
+                
+        </form>
+        
+       
+       
+        <script>
+            function myFunction() {
+                var mess = document.getElementById("mess");
+                mess.innerHTML = "";
+                try {
+                    var x = document.getElementById("demo").value;
+                    if(x == "")  throw "Empty";
+                    if(isNaN(x)) throw "Not a number";
+                    if(x > 6)   throw "The number of classes is too high";
+                    if(x < 2)    throw "The number of classes is too low";
+                }
+              catch(err) {
+                    mess.innerHTML = "Error: " + err + ".";
+             }
+             
+
+            }
+        </script>
+    
+        <p>How many classes do you have this semester? Please input a number between 2 and 7</p>
+        
+        <input id="demo" type="text">
+           
+            
+            <button type="button" onclick="myFunction()">Test Input</button>
+             <p id="mess"></p>
+            <br>
+            </br>
+            
+            <form>
+                <input type="checkbox" name="Studies" value="Major">I have a major<br>
+                <input type="checkbox" name="Studies" value="Minor">I have a minor
+                        </form>
+            <br>
+            </br>
+            
+            
+              <input type="button" value="Submit form" onclick="alert('thank you very much for your submission! ');" />
+            
+    </body>
+</html>
+
+
+

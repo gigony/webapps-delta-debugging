@@ -1,0 +1,21 @@
+http://localhost:8080/Bmatchesadmin.html
+selenium.type("id=SemiRound", "2");
+selenium.type("id=TeamNum1", "2");
+selenium.type("id=TeamScore1", "2");
+selenium.type("id=TeamNum2", "3");
+selenium.type("id=TeamScore2", "3");
+selenium.click("css=input[type=\"button\"]");
+selenium.click("link=Tournament Administration"); selenium.waitForPageToLoad("30000");
+selenium.click("name=erase");
+selenium.click("name=erase");
+selenium.click("name=erase");
+selenium.click("name=erase");
+selenium.click("xpath=(//input[@name='erase'])[2]");
+selenium.click("name=erase");
+selenium.click("l‰ink=A Pool Match Administration"); selenium.waitForPageToLoad("30000");
+selenium.click("link=Tournament Main"); selenium.waitForPageToLoad("30000");
+selenium.click("xpath=(//input[@name='erase'])[7]");
+selenium.click("xpath=(//input[@name='erase'])[8]");
+selenium.click("xpath=(//input[@name='erase'])[4]");
+selenium.click("xpath=(//input[@name='erase'])[5]");
+selenium.click("xpath=(//input[@name='erase'])[4]");

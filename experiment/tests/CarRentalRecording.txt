@@ -1,0 +1,14 @@
+http://localhost:8080/CarRental.html
+selenium.select("id=carSelect", "label=BMW");
+selenium.type("css=input[name=\"Color \"]", "red");
+selenium.type("name=points", "9");
+selenium.type("name=googlesearch", "car");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.click("name=vehicle");
+selenium.click("id=phone_yes");
+selenium.type("id=PhoneNumber", "069617876");
+selenium.type("name=quantity", "7");
+selenium.type("name=LastName", "Hm");
+selenium.type("name=quantity", "4");
+selenium.type("name=LastName", "Hammoudi");
+selenium.type("id=PhoneNumber", "fdjgjsfdgjsfdjhg");

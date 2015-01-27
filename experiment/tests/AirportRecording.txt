@@ -1,0 +1,9 @@
+http://localhost:8080/Airport.html
+
+selenium.type("name=firstname", "Mouns");
+selenium.type("name=lastname", "Hammoudi");
+selenium.type("name=firstname", "Mouna");
+selenium.type("xpath=(//input[@name='lastname'])[2]", "mkjhdshj");
+selenium.type("xpath=(//input[@name='lastname'])[3]", "09:00 AM");
+selenium.click("css=button[type=\"button\"]"); assertEquals("Thank you for your submission", selenium.getAlert());
+	

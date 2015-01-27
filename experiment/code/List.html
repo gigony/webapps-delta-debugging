@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        
+    
+        $(document).ready(function(){
+                          
+                          $("#btn2").click(function(){
+                                var e = document.getElementById("selectionField");
+                                var strUser = e.options[e.selectedIndex].value;
+                                $("ol").append($"strUser");
+                                           });
+                          });
+                          
+                    
+        </script>
+    <body>
+            
+            <select size="3" name="selectionField"id="selectionField" multiple="yes" >
+                <option value="HarryPotter" >Harry Potter</option>
+                <option value="LordRings" >Lord of the Rings</option>
+                <option value="Hunger" >The Hunger Games</option>
+            </select>
+            <input type='button' onclick='changeText2()' value='Add to the basket' />
+            
+            <input type='button' onclick='changeText()' value='Empty the basket' />
+    </body>
+    
+            <h1> Here is your shopping cart </h1>
+            <ol id="demo"></ol>
+    
+    <script>
+      
+            var list = document.getElementById('demo');
+            
+            function changeText2() {
+            var firstname = document.getElementById('selectionField').value;
+           
+            var entry = document.createElement('li');
+            entry.appendChild(document.createTextNode(firstname));
+            list.appendChild(entry);
+            }
+
+        
+        function changeText() {
+            var content = document.getElementById('demo').value;
+            if(content == ""){
+                changeText2();
+                
+                changeText2();
+                changeText2();
+            }else{
+                document.getElementById('demo').innerHTML = "";
+            }
+        }
+    </script>
+
+
+</html>

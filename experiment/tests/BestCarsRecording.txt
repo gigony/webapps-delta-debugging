@@ -1,0 +1,5 @@
+http://localhost:8080/BestCars.html
+selenium.type("name=firstname", "Mouna");
+selenium.type("name=lastname", "Hammoudi");
+selenium.type("xpath=(//input[@name='lastname'])[2]", "198");
+selenium.type("xpath=(//input[@name='lastname'])[2]", "jfdjhjdsjh");

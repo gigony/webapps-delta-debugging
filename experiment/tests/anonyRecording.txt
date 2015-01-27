@@ -1,0 +1,49 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.regex.Pattern;
+import static org.apache.commons.lang3.StringUtils.join;
+
+public class anonyRecording {
+	private Selenium selenium;
+
+	@Before
+	public void setUp() throws Exception {
+		WebDriver driver = new FirefoxDriver();
+		String baseUrl = "http://129.93.164.127:4647/";
+		selenium = new WebDriverBackedSelenium(driver, baseUrl);
+	}
+
+	@Test
+	public void testAnonyRecording() throws Exception {
+		selenium.open("file:///Users/mouna/Documents/TestJavascript/code/anony.html");
+		selenium.type("id=demo", "10");
+		selenium.click("css=button[type=\"button\"]");
+		selenium.type("id=demo", "20");
+		selenium.click("css=button[type=\"button\"]");
+		selenium.type("id=demo", "19");
+		selenium.click("css=button[type=\"button\"]");
+		selenium.type("name=firstname", "Mouna");
+		selenium.type("name=lastname", "Hammoudi");
+		selenium.click("xpath=(//input[@name='sex'])[2]");
+		selenium.type("name=pwd", "mofdjjkdsjk");
+		selenium.click("name=vehicle");
+		selenium.click("xpath=(//input[@name='vehicle'])[2]");
+		selenium.type("name=user", "mouna");
+		selenium.click("css=input[type=\"button\"]");
+		selenium.click("//input[@value='Click me...']");
+		assertEquals("thank u", selenium.getAlert());
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		selenium.stop();
+	}
+}

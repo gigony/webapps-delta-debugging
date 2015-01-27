@@ -1,0 +1,9 @@
+http://localhost:8080/Apooladmin.html
+selenium.type("id=tnumber", "23");
+selenium.type("id=tname", "Mouna");
+selenium.type("id=tweb", "mouna@cse.unl.edu");
+selenium.click("css=input[type=\"button\"]");
+selenium.click("link=Pool B Teams Administration"); selenium.waitForPageToLoad("30000");
+selenium.click("link=A Pool Match Admin"); selenium.waitForPageToLoad("30000");
+selenium.click("link=Tournament Admin"); selenium.waitForPageToLoad("30000");
+selenium.click("link=Top Dogs"); selenium.waitForPageToLoad("30000");

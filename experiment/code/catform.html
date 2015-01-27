@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+<form>
+    <h1> Cat form</h1>
+    <body>
+        <br>
+        
+        
+        
+        
+        <form>
+            First Name <input type="text" name="first "><br>
+                <br>
+                
+                Last Name <input type="text" name="last "><br>
+                    <br>
+                    Cat race<input type="text" name="race "><br>
+                        <br>
+                        
+                        <input type="radio" name="sex" value="male">Male<br>
+                            <input type="radio" name="sex" value="female">Female
+                                <br>
+                                </br>
+                                How old is your cat?<input type="text" name="race "><br>
+                                    <br>
+                                    
+                                    
+                                    Select a week for your appointment: <input type="week" name="year_week"><br>
+                                        <br>
+                                        E-mail: <input type="email" name="email"><br>
+                                            <br>
+                                            </br>
+                                            Phone number: <input type="text" name="Phone"><br>
+                                                <br>
+                                                <br>
+                                                </br>
+                                                Payment Method: <select>
+                                                    <option value="Visa">Visa</option>
+                                                    <option value="American express">American express</option>
+                                                    <option value="Discover">Discover</option>
+                                                    <option value="MasterCard">MasterCard</option>
+                                                </select>
+                                                <br>
+                                                <br>
+                                                Credit card Number <input type="text" name="credit "><br>
+                                                    <br>
+                                                    
+                                                    expiration date<input type="text" name="exp "><br>
+                                                        <br>
+                                                        
+                                                        
+                                                        <head>
+                                                            <title>Disable</title>
+                                                            <script>
+                                                                window.onload = function() {
+                                                                    document.getElementById('phone_no').onchange = disablefield;
+                                                                    document.getElementById('phone_yes').onchange = disablefield;
+                                                                }
+                                                            
+                                                    function disablefield()
+                                                {
+                                                    if ( document.getElementById('phone_no').checked == true ){
+                                                    document.getElementById('PhoneNumber').value = '';
+                                                    document.getElementById('PhoneNumber').disabled = true
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    }
+                                                    else if (document.getElementById('phone_yes').checked == true ){
+                                                    document.getElementById('PhoneNumber').disabled = false;
+                                                    
+                                       
+                                                    
+                                                    
+                                                    }
+                                                            }
+                                                            
+                                                                </script>
+                                                        </head>
+                                                        
+                                                        
+                                                        <br>
+                                                        
+                                                        <form>
+                                                            <br>
+                                                            <action="post" method="get" name="admin">
+                                                                Has your cat ever had rabies?
+                                                                
+                                                                <br>
+                                                                </br>
+                                                                
+                                        Yes:<input type="radio" name="Phone" value="no" id="phone_no"/>
+                                        No:<input type="radio" name="Phone" value="yes" id="phone_yes"/>
+                                                                <br>
+                                                                <br/>
+                                    If you answered yes, How long ago?
+                                        <input name="PhoneNumber" type="text" id="PhoneNumber" size="25" />
+                                        
+                                        
+                               
+                                        
+                                        
+                                                                <br/>
+                                                                <br>
+                                                                </br>
+                                                                
+                                                                
+                        <button onclick="myFunction()">Submit Request</button>
+                                                                
+                                    <script>
+                                function myFunction() {
+                    alert("Thank you very much for your submission, you will receive a confirmation message shortly!");
+                                                                    }
+                                                                </script>
+                                                                
+                    <br>
+                </br>
+                                                                
+                <br>
+                </br>
+                                                         
+                                                                
+                                                                
+                                                                
+             <br>
+            </br>
+                                                    
+                                                                
+                                                                
+                                                                
+        <br>
+        </br>
+        </form>
+                                                        
+                                                        
+                                                        
+        </body>
+    
+</html>
+
+<br>
+</br>            </form>
+           
+    
+    
+    </body>
+
+</html>

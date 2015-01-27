@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>CustomCart Standard Edition Shopping Cart Software Demo Store</title>
+        <meta name="description" content="Shopping cart software demo store.  See how easy it is to use our shopping cart software!" />
+        <meta name="Keywords" content="shopping cart software, demo" />
+        <meta name="robots" content="index,follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="/customcart.css" />
+        <script type="text/javascript">
+            <!--
+            var CodeViewer = null;
+            function OpenCodeWin(URL)
+            {CodeViewer=window.open(URL,'Help','toolbar=no,width=640,height=500,resizable=yes,left=5,top=5,scrollbars=yes');}
+            //-->
+            </script>
+        <style type="text/css">
+            .submit
+            {
+                BORDER-RIGHT: #3e160e 1px solid;
+                BORDER-TOP: #3e160e 1px solid;
+                FONT-WEIGHT: normal;
+                FONT-SIZE: 8pt;
+                BORDER-LEFT: #3e160e 1px solid;
+                COLOR: #3e160e;
+                BORDER-BOTTOM: #3e160e 1px solid;
+                FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+                BACKGROUND-COLOR: #BF8C71
+            }
+        .text-input
+        {
+            BORDER-RIGHT: #3e160e 1px solid;
+            BORDER-TOP: #3e160e 1px solid;
+            FONT-WEIGHT: normal;
+            FONT-SIZE: 9pt;
+            BORDER-LEFT: #3e160e 1px solid;
+            COLOR: #000000;
+            BORDER-BOTTOM: #3e160e 1px solid;
+            FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+            BACKGROUND-COLOR: #FFFFFF;
+        }
+        .cart-table
+        {
+            background-color:#3e160e;
+        }
+        .cart-title
+        {
+            background-color : #BF8C71;
+        }
+        </style>
+    </head>
+    <body background="graphics/stripevertbg.gif">
+        <div align="center">
+            <br /><br />
+            <table width="850" style="BACKGROUND-COLOR: #FFFFFF;" border="0">
+                <tr>
+                    <td align="center"><img src="graphics/lclub.jpg" alt="club" /></td>
+                    <td align="center"><img src="graphics/furniture-header.jpg" alt="header" /></td>
+                    <td align="center"><img src="http://www.customcart.com/graphics/lchair3_sm.jpg" alt="small" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <img src="http://www.customcart.com/graphics/brownbar.jpg" alt="brown bar" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+            <table width="850" bgcolor="#ffffff" cellpadding="5" style="BACKGROUND-COLOR: #FFFFFF;">
+                <tr>
+                    <td align="center" bgcolor="#ffffff">
+                        <table width="750" bgcolor="#ffffff">
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <div align="justify" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        Note that this is a standard HTML page as it might exist on your own web site.
+                                        <p></p>
+                                        The CustomCart Standard Edition shopping cart software "LeatherLux" demonstration store presents a selection of leather chairs for sale using everything from the simplest CartLinks to the more complex (CartLinks are the small HTML forms that submit shopping cart data to CustomCart's transaction system).  The examples below are fully functional CartLinks in a simulated store.  Feel free to add items to the cart including available options and proceed completely through the checkout process.  We will supply you with a test credit card number to complete the test transaction.  (Nothing is being purchased or shipped).
+                                    </div>
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table width="850" bgcolor="#FFFFFF">
+                <tr>
+                    <td>
+                        <table width="840" bgcolor="#ffffff" cellpadding="5" cellspacing="1" style="background-color: #3e160e;">
+                            <tr>
+                                <td valign="top" bgcolor="#ffffff"><b style="color:#3e160e;font-family:arial;font-size:12px;">The Contemporary</b><br />
+                                    <img src="graphics/lchair3_sm.jpg" alt="small" /></td>
+                                <td valign="top" bgcolor="#FFF0C7">
+                                    <div align="justify" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        Our most popular leather chair! Covered in soft, bleached-almond leather "pillow style" upholstery, this chair and ottoman combination is affordably priced. The Contemporary goes with nearly any style!<br />
+                                        <b>$595</b>
+                                        <p></p>
+                                        <span style="color:#3e160e;">Here you see the simplest CartLink, just an "Add to Cart" button.  Without a quantity field, CustomCart will automatically default the quantity to 1.</span>
+                                    </div>
+                                    <div align="center" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        <form action="cart.html" method="post">
+                                            <input type="hidden" name="op" value="add" />
+                                            <input type="hidden" name="item_desc" value='The Contemporary leather chair' />
+                                            <input type="hidden" name="item_price" value="595" />
+                                            <input type="hidden" name="item_id" value="CON01" />
+                                            <input type="hidden" name="image_url" value="http://www.customcart.com/graphics/lchair3_sm.jpg">
+                                                <input type="hidden" name="cid" value="41" />
+                                                <input type="submit" value="Add to Cart" class="submit" style="width:100px;" />
+                                                </form>
+                                        <p></p>
+                                        <a href="javascript:OpenCodeWin('demo_code1.cfm')" class="bodylink" style="color:#3e160e;font-family:arial;font-size:12px;text-decoration:underline;">View HTML code for this CartLink</a> &nbsp;(Opens in a pop-up window)
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <table width="840" bgcolor="#ffffff" cellpadding="5" cellspacing="1" style="BACKGROUND-COLOR: #3e160e;">
+                            <tr>
+                                <td valign="top" bgcolor="#ffffff"><b style="color:#3e160e;font-family:arial;font-size:12px;">The Mediterranean</b><br />
+                                    <img src="graphics/lchair1_sm.jpg" alt="small" /></td>
+                                <td valign="top" bgcolor="#FFF0C7">
+                                    <div align="justify" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        The Mediterranean is our most fabulous leather chair/Ottoman combination. Handcrafted with sturdy hardwoods and covered with the finest imported leather from our supplier in northern Spain, this chair and ottoman are comfortable and attractive. Available in Pecan, Bleached Almond, Ivory, Midnight Blue, Black.<br />
+                                        <b>$995</b>
+                                        <p></p>
+                                        <span style="color:#3e160e;">This example shows how a CartLink can display a quantity field as well as option selections.  Note that CustomCart supports an unlimited number of options (such as color, size, etc.) with a very large number of choices (such as red, blue, large, medium, small, etc.). Also note that option choices can add to or subtract from the base price of the item based on the shopper's selection.</span>
+                                    </div>
+                                    <div align="center">
+                                        <form action="cart.html" method="post">
+                                            <input type="hidden" name="OptionCount" value="1" />
+                                            <table>
+                                                <tr>
+                                                    <td style="color:#3e160e;font-family:arial;font-size:14px;">Qty:</td>
+                                                    <td><input type="text" name="item_qty" size="3" value="1" class="text-input" /></td>
+                                                    <td style="color:#3e160e;font-family:arial;font-size:14px;">&nbsp;Color:</td>
+                                                    <td>
+                                                        <select name="Option1" class="text-input">
+                                                            <option value="PE|Color: Pecan|0">Pecan </option>
+                                                            <option value="BA|Color: Bleached Almond (add $35)|35" >Bleached Almond (add $35)</option>
+                                                            <option value="IV|Color: Ivory|0" >Ivory </option>
+                                                            <option value="MB|Color: Midnight Blue (add $75)|75" >Midnight Blue (add $75)</option>
+                                                            <option value="BL|Color: Black (subtract $20)|-20" >Black (subtract $20)</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="hidden" name="op" value="add" />
+                                                        <input type="hidden" name="item_desc" value='The Mediterranean leather chair' />
+                                                        <input type="hidden" name="item_price" value="995" />
+                                                        <input type="hidden" name="item_id" value="MED01" />
+                                                        <input type="hidden" name="image_url" value="http://www.customcart.com/graphics/lchair1_sm.jpg">
+                                                            <input type="hidden" name="cid" value="41" />
+                                                            <input type="submit" value="Add to Cart" class="submit" style="width:100px;" />
+                                                            </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                        <p></p>
+                                        <a href="javascript:OpenCodeWin('demo_code2.cfm')" class="bodylink" style="color:#3e160e;font-family:arial;font-size:12px;text-decoration:underline;">View HTML code for this CartLink</a> (Opens in a pop-up window)
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <table width="840" bgcolor="#ffffff" cellpadding="5" cellspacing="1" style="BACKGROUND-COLOR: #3e160e;">
+                            <tr>
+                                <td valign="top" bgcolor="#ffffff" width="150"><b style="color:#3e160e;font-family:arial;font-size:12px;">The Recliner</b><br /><img src="graphics/lchair2_sm.jpg" alt="small chair" /></td>
+                                <td valign="top" bgcolor="#FFF0C7" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                    <div align="justify" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        Our ingenious leather recliner combines the the style and comfort you have come to expect from the leader in leather chairs with the functionality of a zero-clearance reclining chair. Available in midnight blue, black, oak, or egg shell leather with burnished copper trim. <br />
+                                        <b>$1185 &nbsp;-&nbsp; $1280</b>
+                                        <p></p>
+                                        <span style="color:#3e160e;">In this example, a CartLink is setup with an option selection in a radio button configuration.  Note that CustomCart supports an unlimited number of options (such as color, size, etc.) with a very large number of choices (such as red, blue, large, medium, small, etc.). Also note that option choices can add to or subtract from the base price of the item based on the shopper's selection.</span>
+                                    </div>
+                                    <div align="center">
+                                        <form action="cart.html" method="post">
+                                            <input type="hidden" name="OptionCount" value="1" />
+                                            <input type="hidden" name="op" value="add" />
+                                            <input type="hidden" name="item_desc" value='The Recliner leather chair' />
+                                            <input type="hidden" name="item_price" value="1195" />
+                                            <input type="hidden" name="image_url" value="http://www.customcart.com/graphics/lchair2_sm.jpg">
+                                                <input type="hidden" name="item_id" value="REC0101" />
+                                                <input type="hidden" name="cid" value="41" />
+                                                <table>
+                                                    <tr>
+                                                        <td valign="top">Quantity: <input type="text" name="item_qty" size="3" value="1" class="text-input" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Select Color</b></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left">
+                                                            <input type="radio" name="option1" value="EG|Color: Egg Shell|0" checked="checked" />Egg Shell<br />
+                                                            <input type="radio" name="option1" value="OK|Color: Oak (add $25)|25" />Oak (add $25)<br />
+                                                            <input type="radio" name="option1" value="MB|Color: Midnight Blue (add $85)|85" />Midnight Blue (add $85)<br />
+                                                            <input type="radio" name="option1" value="BL|Color: Black (subtract $10)|-10" />Black (subtract $10)<br />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="submit" value="Add to Cart" class="submit" style="width:100px;" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                </form>
+                                        <p></p>
+                                        <a href="javascript:OpenCodeWin('demo_code3.cfm')" class="bodylink" style="color:#3e160e;font-family:arial;font-size:12px;text-decoration:underline;">View HTML code for this CartLink</a> (Opens in a pop-up window)
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <table width="840" bgcolor="#ffffff" cellpadding="5" cellspacing="1" style="BACKGROUND-COLOR: #3e160e;">
+                            <tr>
+                                <td valign="top" bgcolor="#ffffff" width="150"><b style="color:#3e160e;font-family:arial;font-size:12px;">The Modern Club</b><br /><img src="graphics/lclub.jpg" alt="club" /></td>
+                                <td valign="top" bgcolor="#FFF0C7" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                    <div align="justify" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        Sleek style and sophistication make this beautiful club chair stand out from the crowd.  If you like the clean lines of the modern movement, you will love our leather-wrapped modern club chair.  Available in taupe, black, bleached almond, or ivory leather with your choice of oak, cherry, walnut, or maple wood legs. <br />
+                                        <b>$745 - $800</b>	
+                                        <p></p>
+                                        <span style="color:#3e160e;">In this example, a CartLink is setup with two option selections, one for leather color, the other for wood finish.  Note that CustomCart supports an unlimited number of options (such as color, size, etc.) with a very large number of choices (such as red, blue, large, medium, small, etc.). Also note that option choices can add to or subtract from the base price of the item based on the shopper's selection.</span>
+                                    </div>
+                                    <div align="center">
+                                        <form action="cart.html" method="post">
+                                            <input type="hidden" name="OptionCount" value="2" />
+                                            <input type="hidden" name="op" value="add" />
+                                            <input type="hidden" name="item_desc" value='The Modern Club leather chair' />
+                                            <input type="hidden" name="item_price" value="745" />
+                                            <input type="hidden" name="image_url" value="http://www.customcart.com/graphics/lclub.jpg">
+                                                <input type="hidden" name="item_id" value="MODCLUB01" />
+                                                <input type="hidden" name="cid" value="41" />
+                                                <table>
+                                                    <tr>
+                                                        <td valign="top">Quantity: <input type="text" name="item_qty" size="3" value="1" class="text-input" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Select Color</b></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left">
+                                                            <select name="Option1" class="text-input" style="width:200px;">
+                                                                <option value="TA|Color: Taupe|0">Taupe</option>
+                                                                <option value="BL|Color: Black (add $25)|25" >Black (add $25)</option>
+                                                                <option value="BA|Color: Bleached Almond (add $10)|10" >Bleached Almond (add $10)</option>
+                                                                <option value="IV|Color: Ivory (add $45)|45" >Ivory (add $45)</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Select Leg Wood Finish</b></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left">
+                                                            <select name="Option2" class="text-input" style="width:200px;">
+                                                                <option value="TA|Leg Wood Finish: Oak|0">Oak</option>
+                                                                <option value="CH|Leg Wood Finish: Cherry (add $15)|215" >Cherry (add $25)</option>
+                                                                <option value="WA|Leg Wood Finish: Walnut|0">Walnut</option>
+                                                                <option value="MA|Leg Wood Finish: Maple (add $55)|55" >Maple (add $45)</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="submit" value="Add to Cart" class="submit" style="width:100px;" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                </form>
+                                        <p></p>
+                                        <a href="javascript:OpenCodeWin('demo_code4.cfm')" class="bodylink" style="color:#3e160e;font-family:arial;font-size:12px;text-decoration:underline;">View HTML code for this CartLink</a> (Opens in a pop-up window)
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <table width="840" bgcolor="#ffffff" cellpadding="5" cellspacing="1" style="BACKGROUND-COLOR: #3e160e;">
+                            <tr>
+                                <td valign="top" bgcolor="#ffffff" width="150"><b style="color:#3e160e;font-family:arial;font-size:12px;">The Retro Club</b><p></p><img src="graphics/lretro.jpg" alt="retro" /></td>
+                                <td valign="top" bgcolor="#FFF0C7" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                    <div align="justify" style="color:#3e160e;font-family:arial;font-size:12px;">
+                                        The Retro leather club chair draws its looks from its heritage of the art-deco style of the 1930's.  Great style and affordability! Available in club ebony, stunning red, or soft cream leather with your choice of oak, cherry, walnut, ebony, or maple wood legs. <br />
+                                        <b>$745 - $800</b>
+                                        <p></p>
+                                        <div align="center">
+                                            <b style="color:red;">NOTE: Due to special shipping requirements, this<br />chair requires an additional $20 shipping surcharge.</b>
+                                        </div>
+                                        <p></p>
+                                        <span style="color:#3e160e;">In this example, in addition to an option selection, a special shipping surcharge is added to cover additional shipment costs.  View the code for this CartLink to see the additional hidden data field that tells CustomCart to apply this special charge.</span>
+                                    </div>
+                                    <div align="center">
+                                        <form action="cart.html" method="post">
+                                            <input type="hidden" name="OptionCount" value="1" />
+                                            <input type="hidden" name="op" value="add" />
+                                            <input type="hidden" name="item_desc" value='The Modern Club leather chair' />
+                                            <input type="hidden" name="item_price" value="745" />
+                                            <input type="hidden" name="item_id" value="MODCLUB01" />
+                                            <input type="hidden" name="image_url" value="http://www.customcart.com/graphics/lretro.jpg">
+                                                <input type="hidden" name="cid" value="41" />
+                                                <input type="hidden" name="shipping_surcharge" value="20.00" />
+                                                <table>
+                                                    <tr>
+                                                        <td valign="top"><b>Qty:</b> <input type="text" name="item_qty" size="3" value="1" class="text-input" />&nbsp;</td>
+                                                        <td>&nbsp;<b>Color</b></td>
+                                                        <td align="left">
+                                                            <select name="Option1" class="text-input" style="width:180px;">
+                                                                <option value="EB|Color: Club Ebony|0">Club Ebony</option>
+                                                                <option value="SR|Color: Stunning Red (add $15)|15" >Stunning Red (add $15)</option>
+                                                                <option value="SC|Color: Soft Cream (add $10)|10" >Soft Cream (add $10)</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>&nbsp;<input type="submit" value="Add to Cart" class="submit" style="width:100px;" /></td>
+                                                    </tr>
+                                                </table>
+                                                </form>
+                                        <p></p>
+                                        <a href="javascript:OpenCodeWin('demo_code5.cfm')" class="bodylink" style="color:#3e160e;font-family:arial;font-size:12px;text-decoration:underline;">View HTML code for this CartLink</a> (Opens in a pop-up window)
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div align="center">
+            <table width="850" bgcolor="#ffffff">
+                <tr>
+                    <td align="center">
+                        <br />
+                        <img src="https://secure.agenne.com/client_headers/furnituredemo/graphics/brownbar.jpg" alt="brownbar" />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <br />
+                        <br />
+                    </td>
+                </tr>
+            </table></div>
+        <br />
+        <br />
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>eval1Recording</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">eval1Recording</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/mouna/Documents/TestJavascript/code/eval1.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>mouna@cse.unl.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phone_number</td>
+	<td>878776</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mobile_number</td>
+	<td>32232323</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=yes_drives</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=18to21</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=22to34</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=any_time</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=tue_morn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=wed_afternoon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=wed_evening</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=tue_evening</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=tue_afternoon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=mon_afternoon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=mon_evening</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>thank you very much for your submission! </td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

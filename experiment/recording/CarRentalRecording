@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>CarRentalRecording</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CarRentalRecording</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/mouna/Documents/TestJavascript/code/CarRental.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=carSelect</td>
+	<td>label=BMW</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;Color &quot;]</td>
+	<td>red</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=points</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=googlesearch</td>
+	<td>car</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sex'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=vehicle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=phone_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PhoneNumber</td>
+	<td>069617876</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=quantity</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=LastName</td>
+	<td>Hm</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=quantity</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=LastName</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PhoneNumber</td>
+	<td>fdjgjsfdgjsfdjhg</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<HEAD>
+    <LINK href="mouna.css" rel="stylesheet" type="text/css">
+        </HEAD>
+<body>
+    First Name: <input type="text" name="fn"></br>
+        Last Name: <input type="text" name="fn"></br>
+            Birthday <input type="date" name="fn"></br>
+                <input type="radio" name="fem"> Female</br>
+                    <input type="radio" name="fem">Male</br>
+                        Phone Number: <input type="tel" name="fn"></br>
+                            Address: <input type="text" name="fn"></br>
+                                Postal Code: <input type="text" name="fn"></br>
+                                    </br>
+                                    <h2> Play a game </h2>
+                                    <ul id="sortable" onclick="function()">
+                                        
+                                        <li class="ui-state-default" custom-cl="P" >P</li>
+                                        <li class="ui-state-default" custom-cl="E" >E</li>
+                                        <li class="ui-state-default" custom-cl="R" >R</li>
+                                        <li class="ui-state-default" custom-cl="R" >R</li>
+                                        <li class="ui-state-default" custom-cl="O" >O</li>
+                                        
+                                    </ul>
+                                    
+                                    <ul class="pager">
+                                        <div class="clicked"><button type="button">Next</button></div>
+                                    </ul>
+                                    
+                                    <br>
+                                    
+                                    
+                                    </br>
+                                    <br>
+                                    </br>
+                                    
+                                    <ul id="sortable2" onclick="function()">
+                                        
+                                        <li class="ui-state-default" custom-cl="D" >Y</li> 
+                                        <li class="ui-state-default" custom-cl="I" >I</li> 
+                                        <li class="ui-state-default" custom-cl="E" >D</li> 
+                                        <li class="ui-state-default" custom-cl="G" >E</li> 
+                                        <li class="ui-state-default" custom-cl="O" >U</li> 
+                                    </ul>
+                                    <script>
+                                        $(function() {
+                                          
+                                          $(" #sortable ").sortable({axis: "x", containment: "window"});
+                                          $(" #sortable2 ").sortable({axis: "x", containment: "window"});
+                                          $( ".clicked" ).click( function() {
+                                                                
+                                                                var sortedIDs = $( "#sortable" ).sortable( "toArray", {attribute: 'custom-cl'} );
+                                                                alert(sortedIDs);
+                                                                
+                                                                var target = "http://localhost:3000/langs";
+                                                                
+                                                                $.ajax({
+                                                                       type: 'get',
+                                                                       url: target + '?order='+sortedIDs.join(',') ,
+                                                                       dataType: 'script'
+                                                                       }); 
+                                                                });     
+                                          });(4, 3);
+                                        </script>
+                                    
+                                    
+                                    
+</body>

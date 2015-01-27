@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "- //W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+      finaladmin.html - tournament administration page for the semi-final and
+      final matches of the tournament.
+      Author: Wayne Motycka
+      Date: Mar 25, 2008
+      CS464 Spring 08
+      HW 4
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="standings.css"/>
+<script type="text/javascript" src="./Hfinaladmin.js"></script>
+<title>Tournament Administration - Semifinals and Final</title>
+</head>
+<body onload="addhdr()">
+<h1>Semi Final and Final Administration</h1>
+<form action="">
+<div class="centered">
+SemiFinal<input type="radio" id="sftype" name="gtype" checked="checked"/>
+Final<input type="radio" id="ftype" name="gtype"/>
+<br />
+<br />
+Pool:<input type="text" id="PoolGroup" size="1" maxlength="1"/>
+Team 1:<input type="text" id="TeamNum1" size="2" maxlength="2"/>
+Score:<input type="text" id="TeamScore1" size="4" maxlength="4"/>
+Team 2:<input type="text" id="TeamNum2" size="2" maxlength="2"/>
+Score:<input type="text" id="TeamScore2" size="4" maxlength="4"/>
+<br />
+<br />
+<input type="button" onclick="insRow()" value="Add/Change Match"/>
+</div>
+<div class="centered">
+<br />
+<a href="./adminmain.xml">Tournament Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="tournament.xml">Tournament Main</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Apooladmin.html">Pool A Teams Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Bpooladmin.html">Pool B Teams Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Amatchesadmin.html">A Pool Match Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Bmatchesadmin.html">B Pool Match Administration</a>
+</div>
+</form>
+<div>
+<hr />
+</div>
+<div class="cwhdr">
+Pool <em class="sm">A</em> - Tournament Semifinal Round
+</div>
+<table id="semiA" border="0" cellspacing="20px">
+<tr>
+<td>2</td>
+<td>763</td>
+<td>4</td>
+<td>772</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+<div class="cwhdr">
+Pool <em class="sm">B</em> - Tournament Semifinal Round
+</div>
+<table id="semiB" border="0" cellspacing="20px">
+<tr>
+<td>7</td>
+<td>696</td>
+<td>10</td>
+<td>710</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+<h2 style="text-align: center"><em class="bd">Tournament Final Round</em></h2>
+<table id="finals" border="0" cellspacing="20px">
+<tr>
+<td>4</td>
+<td>751</td>
+<td>10</td>
+<td>718</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+</body>
+</html>

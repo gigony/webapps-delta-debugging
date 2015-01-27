@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "- //W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!--
+      Bmatchesadmin.html - tournament administration page for the pool play matches
+      of the tournament.
+      Author: Wayne Motycka
+      Date: Mar 26, 2008
+      CS464 Spring 08
+      HW 4
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="standings.css"/>
+<script type="text/javascript" src="./matchesadmin.js"></script>
+<title>Tournament Administration - B Pool Matches</title>
+</head>
+<body onload="addhdr()">
+<h1>B Pool Team Matches Administration</h1>
+<form action="">
+<div class="centered">
+<br />
+<br />
+Round:<input type="text" id="SemiRound" size="1" maxlength="1"/>
+Team 1:<input type="text" id="TeamNum1" size="2" maxlength="2"/>
+Score:<input type="text" id="TeamScore1" size="4" maxlength="4"/>
+Team 2:<input type="text" id="TeamNum2" size="2" maxlength="2"/>
+Score:<input type="text" id="TeamScore2" size="4" maxlength="4"/>
+<br />
+<br />
+<input type="button" onclick="insRow()" value="Add/Change Match"/>
+</div>
+<div class="centered">
+<br />
+<a href="./adminmain.xml">Tournament Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="tournament.xml">Tournament Main</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Apooladmin.html">Pool A Teams Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Bpooladmin.html">Pool B Teams Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Amatchesadmin.html">A Pool Match Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="finaladmin.html">Semi &amp; Final Administration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+</form>
+<div>
+<hr />
+</div>
+<h2 style="text-align: center">Pool <em class="bd">B</em> Matches</h2>
+<form id="tbls" action="">
+<h3 style="text-align: center">Round 1</h3>
+<table id="rnd1" border="0" cellspacing="20px">
+<tr>
+<td >2</td>
+<td >712</td>
+<td >1</td>
+<td >744</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td >4</td>
+<td >756</td>
+<td >3</td>
+<td >722</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td >6</td>
+<td >739</td>
+<td >5</td>
+<td >787</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+<h3 style="text-align: center">Round 2</h3>
+<table id="rnd2" border="0" cellspacing="20px">
+<tr>
+<td>2</td>
+<td>721</td>
+<td>3</td>
+<td>783</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td >4</td>
+<td>771</td>
+<td >5</td>
+<td >779</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td >6</td>
+<td >812</td>
+<td >1</td>
+<td >807</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+<h3 style="text-align: center">Round 3</h3>
+<table id="rnd3" border="0" cellspacing="20px">
+<tr>
+<td >2</td>
+<td >788</td>
+<td >5</td>
+<td >760</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td >4</td>
+<td >729</td>
+<td >1</td>
+<td >779</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+<tr>
+<td >6</td>
+<td >818</td>
+<td >3</td>
+<td >779</td>
+<td><input type="checkbox" name="erase" onclick="chkDel(this)"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
