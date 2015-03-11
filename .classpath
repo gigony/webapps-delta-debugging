@@ -52,15 +52,11 @@
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/commons-lang3-3.3.2.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/commons-logging-1.1.3.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/cssparser-0.9.14.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/libs/gson-2.3.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/guava-18.0.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/hamcrest-library-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/htmlunit-2.15.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/htmlunit-core-js-2.15.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/libs/httpclient-4.3.4.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/libs/httpcore-4.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/libs/httpmime-4.3.4.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/ini4j-0.5.2.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/jcommander-1.29.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/jetty-websocket-8.1.8.jar"/>
@@ -70,7 +66,6 @@
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/nekohtml-1.9.21.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/netty-3.5.7.Final.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/operadriver-1.5.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/libs/phantomjsdriver-1.1.0.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/protobuf-java-2.4.1.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/sac-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/serializer-2.7.1.jar"/>
@@ -78,8 +73,6 @@
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="lib/seleniumLib/libs/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/selenium-java-2.44.0-srcs.jar"/>
-	<classpathentry kind="lib" path="lib/seleniumLib/selenium-java-2.44.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="lib/vertx/jackson-core-2.2.2.jar"/>
 	<classpathentry kind="lib" path="lib/vertx/jackson-databind-2.2.2.jar"/>
@@ -92,5 +85,12 @@
 	<classpathentry kind="lib" path="lib/vertx/vertx-testframework-2.0.0-final.jar"/>
 	<classpathentry kind="lib" path="lib/guava-18.0.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.6.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/libs/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/libs/httpclient-4.3.6.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/libs/httpcore-4.3.3.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/libs/httpmime-4.3.6.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/libs/phantomjsdriver-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/selenium-java-2.45.0-srcs.jar"/>
+	<classpathentry kind="lib" path="lib/seleniumLib/selenium-java-2.45.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

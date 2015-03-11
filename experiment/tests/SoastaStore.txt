@@ -1,0 +1,17 @@
+http://www.soastastore.com/
+assertEquals("SOASTA store", selenium.getTitle());
+selenium.selectWindow("null"); 
+selenium.click("link=Store");selenium.waitForPageToLoad("30000");
+selenium.click("id=product_155_submit_button");
+selenium.select("xpath=(//select[@name='product_rating'])[7]", "label=4"); 
+selenium.click("id=product_155_submit_button");
+selenium.type("id=s", "firth");
+selenium.click("id=searchsubmit"); selenium.waitForPageToLoad("30000");
+selenium.click("link=The King’s Speech"); selenium.waitForPageToLoad("30000");
+selenium.select("name=product_rating", "label=4");
+selenium.click("id=product_160_submit_button");
+selenium.click("css=form.wpsc_product_rating > input[type=\"submit\"]");selenium.waitForPageToLoad("30000");
+selenium.click("link=Checkout");selenium.waitForPageToLoad("30000");
+selenium.click("css=input.remove_button");selenium.waitForPageToLoad("30000");
+selenium.click("css=span > input[name=\"submit\"]");selenium.waitForPageToLoad("30000");
+

@@ -9,9 +9,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,10 +24,13 @@ public class TestScript {
   Binding binding;
   AssertHelper assertHelper;
   boolean isWebDriver = false;
-  private int minStart;
-  private int minEnd;
+  
+  private boolean doAutomation = false;  
+//  private int minStart;
+//  private int minEnd;
 
   String logFile;
+
 
   public TestScript() {
     URL[] urls = new URL[] {};
@@ -37,6 +42,7 @@ public class TestScript {
   }
 
   public void open(String url) {
+
     binding.setVariable("url", url);
     if (isWebDriver)
       shell.evaluate("driver.get(url);");
@@ -92,7 +98,7 @@ public class TestScript {
   }
 
   private void minimize(String testCasePath, boolean preservePreState) throws IOException {
-    List<String> lines = Files.readAllLines(FileSystems.getDefault().getPath(testCasePath));
+    List<String> lines = Files.readAllLines(FileSystems.getDefault().getPath(testCasePath), StandardCharsets.UTF_8);
     // get url from the first line
     String url = lines.get(0);
     info(String.format("# url: %s", url));
@@ -113,39 +119,83 @@ public class TestScript {
     info(String.format("There are %d events", events.size()));
 
     // do binary search
-    minStart = 0;
-    minEnd = events.size() - 1;
-    binarySearch(url, events, 0, events.size() - 1, preservePreState);
-    info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", minStart, minEnd, minEnd - minStart
+//    minStart = 0;
+//    minEnd = events.size() - 1;
+//    binarySearch(url, events, 0, events.size() - 1, preservePreState);
+//    info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", minStart, minEnd, minEnd - minStart
+//        + 1, events.size()));
+    SearchResult result = binarySearch(url, events, 0, events.size() - 1, preservePreState, 0, events.size() - 1);
+    info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", result.minStart, result.minEnd, result.minEnd - result.minStart
         + 1, events.size()));
+
 //    binarySearch(url, events, 0, events.size() - 1);
   }
 
 
-  private boolean binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState) {
-    if (start > end)
-      return false;
-
-    executeEvents(url, events, start, end, preservePreState);
-
-    String response = readInput("Have a failure?(yes/no)").toLowerCase();
+//  private boolean binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState) {
+//    if (start > end)
+//      return false;
+//
+//    boolean exeResult = executeEvents(url, events, start, end, preservePreState);
+//
+//    
+//    String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
+//
+//    if (response.equals("yes")) {
+//      minStart = start;
+//      minEnd = end;
+//      if (start == end)
+//        return true;
+//      int mid = (start + end) / 2;
+//      boolean result = binarySearch(url, events, start, mid, preservePreState);
+//      if (!result) {
+//        binarySearch(url, events, mid + 1, end, preservePreState);
+//      }
+//      return true;
+//    } else {
+//      return false;
+//    }
+//  }
+  
+//  private SearchResult binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState, int minStart, int minEnd) {
+//    boolean exeResult = executeEvents(url, events, start, end, preservePreState);
+//    
+//    String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
+//
+//    if (response.equals("yes")) {
+//      if (start == end)
+//        return new SearchResult(true, start, end);
+//      int mid = (start + end) / 2;
+//      SearchResult result = binarySearch(url, events, start, mid, preservePreState, start, end);
+//      if (!result.result) {
+//        result = binarySearch(url, events, mid + 1, end, preservePreState, start, end);
+//      }
+//      return new SearchResult(true, result.minStart,result.minEnd);
+//    } else {
+//      return new SearchResult(false, minStart, minEnd);
+//    }
+//  }
+  private SearchResult binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState, int minStart, int minEnd) {
+    SearchResult result = new SearchResult(false, minStart, minEnd);    
+    boolean exeResult = executeEvents(url, events, start, end, preservePreState);    
+    String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
 
     if (response.equals("yes")) {
-      minStart = start;
-      minEnd = end;
-      if (start == end)
-        return true;
-      int mid = (start + end) / 2;
-      boolean result = binarySearch(url, events, start, mid, preservePreState);
-      if (!result) {
-        binarySearch(url, events, mid + 1, end, preservePreState);
+      if (start == end) {
+        result.minStart = start;
+        result.minEnd = end;
+      } else {
+        int mid = (start + end) / 2;
+        result = binarySearch(url, events, start, mid, preservePreState, start, end);
+        if (!result.succeed) {
+          result = binarySearch(url, events, mid + 1, end, preservePreState, start, end);
+        }
       }
-      return true;
-    } else {
-      return false;
     }
+    return result;
   }
-
+  
+  
   private boolean executeEvents(String url, ArrayList<String> events, int start, int end, boolean preservePreState) {
     if (start > end) {
       return true;
@@ -198,14 +248,24 @@ public class TestScript {
     return true;
   }
 
-  private String readInput(String msg) {
+  private String readInput(String msg, boolean executionResult) {
     info(msg);
+    if (doAutomation) {
+      if (executionResult) {
+        info("no");
+        return "no";
+      }
+      else {
+        info("yes");
+        return "yes";
+      }
+    }
     Scanner scanner = new Scanner(System.in);
     String result = scanner.nextLine().trim();
     info(result);
 
     if (!result.toLowerCase().equals("yes") && !result.toLowerCase().equals("no"))
-      return readInput(msg);
+      return readInput(msg, executionResult);
     return result;
   }
 
@@ -227,12 +287,14 @@ public class TestScript {
     TestScript testScript = new TestScript();
     try {
       testScript.init();
+      testScript.setAutomate(true);
       
-      testScript.run("experiment/tests/CarRentalRecording.txt");
+//      testScript.run("experiment/tests/CarRentalRecording.txt");
+//    testScript.run("experiment/tests/SoastaStore.txt");
 
-      // testScript.run("experiment/tests/BestCarsRecording.txt");
+//       testScript.run("experiment/tests/BestCarsRecording.txt");
       // testScript.run("experiment/tests/BmatchesadminRecording.txt");
-      // testScript.run("experiment/tests/BpoolAdminRecording.txt");
+       testScript.run("experiment/tests/BpoolAdminRecording.txt");
 //       testScript.run("experiment/tests/1.txt");
       testScript.finish();
     } catch (Exception e) {
@@ -240,6 +302,10 @@ public class TestScript {
       e.printStackTrace();
     }
 
+  }
+
+  private void setAutomate(boolean b) {
+    this.doAutomation = b;
   }
 }
 
