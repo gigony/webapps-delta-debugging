@@ -3,9 +3,11 @@ package edu.unl.webtesting;
 import groovy.lang.Binding;
 import groovy.lang.GroovyShell;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -17,6 +19,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.sound.midi.MidiDevice.Info;
+
+import com.thoughtworks.selenium.SeleniumException;
+
 public class TestScript {
   StaticWebServer server;
   // GroovyScriptEngine gse;
@@ -26,10 +32,8 @@ public class TestScript {
   boolean isWebDriver = false;
   
   private boolean doAutomation = false;  
-//  private int minStart;
-//  private int minEnd;
-
   String logFile;
+  private String clearDBUrl = "";
 
 
   public TestScript() {
@@ -47,7 +51,7 @@ public class TestScript {
     if (isWebDriver)
       shell.evaluate("driver.get(url);");
     else
-      shell.evaluate("selenium.open(url);");
+      shell.evaluate("selenium.deleteAllVisibleCookies();selenium.open(url);selenium.waitForPageToLoad(\"30000\");");
   }
 
   public void stop() {
@@ -77,17 +81,22 @@ public class TestScript {
   }
 
   public void run(String testCasePath) throws IOException {
-    run(testCasePath, false);
+    run(testCasePath, "", false);
   }
 
   public void run(String testCasePath, boolean preservePreState) throws IOException {
 
-    StaticWebServer.start("experiment/code");
-    setLogFile(testCasePath);
-
-    minimize(testCasePath, preservePreState);
+    run(testCasePath, "", preservePreState);
 
   }
+  
+  private void run(String testCasePath, String clearRequest, boolean preservePreState) throws IOException {
+    this.clearDBUrl = clearRequest;    
+    StaticWebServer.start("experiment/code");
+    setLogFile(testCasePath);
+    minimize(testCasePath, preservePreState);    
+  }
+  
 
   private void setLogFile(String testCasePath) {
     logFile = testCasePath.replaceAll("\\.txt", "") + ".log";
@@ -104,7 +113,8 @@ public class TestScript {
     info(String.format("# url: %s", url));
 
     lines.remove(0);
-    // open("http://localhost:8080/Airport.html");
+    
+     
 
     // format event texts to be used in Groovy script engine.
     ArrayList<String> events = new ArrayList<String>();
@@ -115,69 +125,33 @@ public class TestScript {
       if (!line.equals(""))
         events.add(line);
     }
+    
+    ArrayList<String> prefixEvents = extractPrefixEvents(events);
 
-    info(String.format("There are %d events", events.size()));
+    info(String.format("There are %d events (with %d prefix events)", events.size(), prefixEvents.size()));
 
     // do binary search
-//    minStart = 0;
-//    minEnd = events.size() - 1;
-//    binarySearch(url, events, 0, events.size() - 1, preservePreState);
-//    info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", minStart, minEnd, minEnd - minStart
-//        + 1, events.size()));
-    SearchResult result = binarySearch(url, events, 0, events.size() - 1, preservePreState, 0, events.size() - 1);
+    SearchResult result = binarySearch(url, prefixEvents, events, 0, events.size() - 1, preservePreState, 0, events.size() - 1);
     info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", result.minStart, result.minEnd, result.minEnd - result.minStart
         + 1, events.size()));
-
-//    binarySearch(url, events, 0, events.size() - 1);
   }
 
+  private ArrayList<String> extractPrefixEvents(ArrayList<String> events) {
+    ArrayList<String> prefixEvents = new ArrayList<String>();
+    while(!events.isEmpty()) {
+      String firstLine = events.get(0);
+      if (firstLine.trim().startsWith("@")) {
+        prefixEvents.add(events.remove(0).trim().substring(1));
+      } else {
+        break;
+      }
+    }
+    return prefixEvents;
+  }
 
-//  private boolean binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState) {
-//    if (start > end)
-//      return false;
-//
-//    boolean exeResult = executeEvents(url, events, start, end, preservePreState);
-//
-//    
-//    String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
-//
-//    if (response.equals("yes")) {
-//      minStart = start;
-//      minEnd = end;
-//      if (start == end)
-//        return true;
-//      int mid = (start + end) / 2;
-//      boolean result = binarySearch(url, events, start, mid, preservePreState);
-//      if (!result) {
-//        binarySearch(url, events, mid + 1, end, preservePreState);
-//      }
-//      return true;
-//    } else {
-//      return false;
-//    }
-//  }
-  
-//  private SearchResult binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState, int minStart, int minEnd) {
-//    boolean exeResult = executeEvents(url, events, start, end, preservePreState);
-//    
-//    String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
-//
-//    if (response.equals("yes")) {
-//      if (start == end)
-//        return new SearchResult(true, start, end);
-//      int mid = (start + end) / 2;
-//      SearchResult result = binarySearch(url, events, start, mid, preservePreState, start, end);
-//      if (!result.result) {
-//        result = binarySearch(url, events, mid + 1, end, preservePreState, start, end);
-//      }
-//      return new SearchResult(true, result.minStart,result.minEnd);
-//    } else {
-//      return new SearchResult(false, minStart, minEnd);
-//    }
-//  }
-  private SearchResult binarySearch(String url, ArrayList<String> events, int start, int end, boolean preservePreState, int minStart, int minEnd) {
+  private SearchResult binarySearch(String url, ArrayList<String> prefixEvents, ArrayList<String> events, int start, int end, boolean preservePreState, int minStart, int minEnd) {
     SearchResult result = new SearchResult(false, minStart, minEnd);    
-    boolean exeResult = executeEvents(url, events, start, end, preservePreState);    
+    boolean exeResult = executeEvents(url, prefixEvents, events, start, end, preservePreState);    
     String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
 
     if (response.equals("yes")) {
@@ -186,28 +160,45 @@ public class TestScript {
         result.minEnd = end;
       } else {
         int mid = (start + end) / 2;
-        result = binarySearch(url, events, start, mid, preservePreState, start, end);
+        result = binarySearch(url, prefixEvents,events, start, mid, preservePreState, start, end);
         if (!result.succeed) {
-          result = binarySearch(url, events, mid + 1, end, preservePreState, start, end);
+          result = binarySearch(url, prefixEvents, events, mid + 1, end, preservePreState, start, end);
         }
       }
+      result.succeed = true;
     }
     return result;
   }
   
   
-  private boolean executeEvents(String url, ArrayList<String> events, int start, int end, boolean preservePreState) {
+  private boolean executeEvents(String url, ArrayList<String> prefixEvents, ArrayList<String> events, int start, int end, boolean preservePreState) {
     if (start > end) {
       return true;
     }
     info(String.format("# run events from index %d to index %d", start, end));
-    open(url);
+    requestHTTP(this.clearDBUrl);
+    open(url);    
+    
 
     // String scriptText = Joiner.on("\n").join(events.subList(start, end + 1));
     List<String> subList = events.subList(start, end + 1);
 
     boolean preStateMade = true;
-
+    
+    // execute prefix events
+    try {
+      info(String.format("  - executing prefix events"));
+      for (String event : prefixEvents) {
+        shell.evaluate(event);
+      }
+    } catch(Exception e) {
+      info(String.format("\t###### A failure occurs when executing prefix events!!!"));
+      info("\t---");
+      info(String.format("\t%s", e.getMessage()));
+      info("\t---");
+      return false;
+    }
+    
     int index = 0;
     if (preservePreState) {
       try {
@@ -233,11 +224,18 @@ public class TestScript {
       try {
         for (String event : subList) {
           info(String.format("  - execute event %d : %s", index, event));
-          shell.evaluate(event);
+          try{
+            shell.evaluate(event);
+          } catch(SeleniumException e) {
+            info(String.format("\t@Selenium cannot find an element at event %d [%s]. Skipped.", index, e.getClass().getName()));
+            info("\t---");
+            info(String.format("\t%s", e.getMessage()));
+            info("\t---");
+          } 
           index++;
         }
       } catch (Exception e) {
-        info(String.format("\t@A failure occurs at event %d", index));
+        info(String.format("\t@A failure occurs at event %d [%s]", index, e.getClass().getName()));
         info("\t---");
         info(String.format("\t%s", e.getMessage()));
         info("\t---");
@@ -282,6 +280,20 @@ public class TestScript {
       e.printStackTrace();
     }
   }
+  
+  public void requestHTTP(String urlAddr) {
+//    open(urlAddr);
+    try {
+      URL url = new URL(urlAddr);
+      BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+      String strTemp = "";
+      while (null != (strTemp = br.readLine())) {
+        info(strTemp);
+      }
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
 
   public static void main(String[] args) {
     TestScript testScript = new TestScript();
@@ -294,8 +306,11 @@ public class TestScript {
 
 //       testScript.run("experiment/tests/BestCarsRecording.txt");
       // testScript.run("experiment/tests/BmatchesadminRecording.txt");
-       testScript.run("experiment/tests/BpoolAdminRecording.txt");
+//       testScript.run("experiment/tests/BpoolAdminRecording.txt");
+        
 //       testScript.run("experiment/tests/1.txt");
+//      testScript.run("experiment/tests/Failure1.txt", "http://faqforge.dev.10.211.128.220.xip.io/clear.php", false);
+    testScript.run("experiment/tests/Failure1.txt", "http://faqforge.dev/clear.php", false);
       testScript.finish();
     } catch (Exception e) {
       testScript.stop();
@@ -308,31 +323,3 @@ public class TestScript {
     this.doAutomation = b;
   }
 }
-
-
-//private void binarySearch(String url, ArrayList<String> events, int start, int end) {
-//  if (!replayReveals(url, events, start, end)) {
-//    report(events,start,end);
-//    return;
-//  }
-//  
-//  int mid = (start + end) / 2;
-//  
-//  if(replayReveals(url,events,start,mid)) {
-//    binarySearch(url,events,start,mid);
-//  } else {
-//    binarySearch(url,events,mid + 1, end);
-//  }
-//}
-//
-//private void report(ArrayList<String> events, int start, int end) {
-//  info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", start,end, end- start +1, events.size()));
-//}
-//
-//private boolean replayReveals(String url, ArrayList<String> events, int start, int end) {
-//  if (start>end)
-//    return false;
-//  executeEvents(url, events, start, end, false);
-//  String response = readInput("Have a failure?(yes/no)").toLowerCase();
-//  return response.equals("yes");
-//}

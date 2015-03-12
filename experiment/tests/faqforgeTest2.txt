@@ -1,0 +1,61 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.regex.Pattern;
+import static org.apache.commons.lang3.StringUtils.join;
+
+public class faqforgeTest2 {
+	private Selenium selenium;
+
+	@Before
+	public void setUp() throws Exception {
+		WebDriver driver = new FirefoxDriver();
+		String baseUrl = "http://faqforge.dev/";
+		selenium = new WebDriverBackedSelenium(driver, baseUrl);
+	}
+
+	@Test
+	public void testFaqforgeTest2() throws Exception {
+		selenium.open("/");
+		selenium.click("link=Administration");
+		selenium.waitForPageToLoad("30000");
+		selenium.type("name=formuser", "test");
+		selenium.type("name=formpassword", "test");
+		selenium.click("name=submit");
+		selenium.waitForPageToLoad("30000");
+		selenium.type("name=newTitle", "test topic");
+		selenium.type("name=newContext", "test");
+		selenium.type("name=newOrder", "1000");
+		selenium.click("css=input[type=\"submit\"]");
+		selenium.waitForPageToLoad("30000");
+		selenium.click("link=test topic");
+		selenium.waitForPageToLoad("30000");
+		selenium.click("css=a > big");
+		selenium.waitForPageToLoad("30000");
+		selenium.type("xpath=(//textarea[@name='faqText'])[2]", "test2");
+		selenium.click("xpath=(//input[@name='action'])[3]");
+		selenium.waitForPageToLoad("30000");
+		selenium.click("link=Commit Changes");
+		selenium.waitForPageToLoad("30000");
+		selenium.type("name=faqText", "test1");
+		selenium.click("xpath=(//input[@name='action'])[2]");
+		selenium.waitForPageToLoad("30000");
+		selenium.click("link=Commit Changes");
+		selenium.waitForPageToLoad("30000");
+		assertEquals("test3", selenium.getText("xpath=(//textarea[@name='faqText'])[2]"));
+		selenium.deleteAllVisibleCookies();
+		selenium.waitForPageToLoad("30000");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		selenium.stop();
+	}
+}

@@ -1,0 +1,17 @@
+http://faqforge.dev/
+@selenium.click("link=Administration");selenium.waitForPageToLoad("30000");
+@selenium.type("name=formuser", "test");
+@selenium.type("name=formpassword", "test");
+@selenium.click("name=submit");selenium.waitForPageToLoad("30000");
+selenium.type("name=newTitle", "test topic");
+selenium.type("name=newContext", "test");
+selenium.type("name=newOrder", "1000");
+selenium.click("css=input[type=\"submit\"]");selenium.waitForPageToLoad("30000");
+selenium.click("link=test topic");selenium.waitForPageToLoad("30000");
+selenium.click("css=a > big");selenium.waitForPageToLoad("30000");
+selenium.type("xpath=(//textarea[@name='faqText'])[2]", "test2");
+selenium.click("xpath=(//input[@name='action'])[3]");selenium.waitForPageToLoad("30000");
+selenium.click("link=Commit Changes");selenium.waitForPageToLoad("30000");
+selenium.type("name=faqText", "test1");
+selenium.click("xpath=(//input[@name='action'])[2]");selenium.waitForPageToLoad("30000");
+selenium.click("link=Commit Changes");selenium.waitForPageToLoad("30000"); assertEquals("test3", selenium.getText("xpath=(//textarea[@name='faqText'])[2]"));
