@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://timeclockv2.dev.10.211.128.220.xip.io/" />
+<title>Failure2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Failure2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/login.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_userid</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=login_password</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Create New Office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=post_officename</td>
+	<td>mouna</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=create_groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//tr[2]/td/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=User Summary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=glenda</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=admin_perms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=time_admin_perms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=reports_perms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.form.reports_perms[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//tr[2]/td/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=User Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=post_username</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=office_name</td>
+	<td>label=front</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=left_fullname</td>
+	<td>label=don</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=left_inout</td>
+	<td>label=break</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=left_notes</td>
+	<td>this message should exists in the list</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=remember_me</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=left_fullname</td>
+	<td>label=billc</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=left_inout</td>
+	<td>label=in</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=remember_me</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=remember_me</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=remember_me</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=remember_me</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=submit_button</td>
+	<td>label=...</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[4]/td[5]</td>
+	<td>this message should exists in the list</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>TictactoeLong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TictactoeLong</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/gigony/Development/Workspace/eclipse/SeleniumExperiment/experiment/code/TicTacToe.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>mouna@cse.unl.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PhoneNumber</td>
+	<td>4023045473</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=friend</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.live.friend[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertChecked</td>
+	<td>name=sqr5</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=sqr2</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.regex.Pattern;
+import static org.apache.commons.lang3.StringUtils.join;
+
+public class XPhone {
+	private Selenium selenium;
+
+	@Before
+	public void setUp() throws Exception {
+		WebDriver driver = new FirefoxDriver();
+		String baseUrl = "http://129.93.164.127:4647/";
+		selenium = new WebDriverBackedSelenium(driver, baseUrl);
+	}
+
+	@Test
+	public void testXPhone() throws Exception {
+		selenium.open("file:///Users/mouna/Documents/TestJavascript/code/feedback.html");
+		selenium.type("css=input[name=\"first \"]", "Mouna");
+		selenium.type("css=input[name=\"last \"]", "Hammoudi");
+		selenium.type("xpath=(//input[@name='last '])[2]", "Yasmine");
+		assertEquals("empty", selenium.getText("xpath=(//input[@name='last '])[2]"));
+		selenium.type("name=email", "mouna@cse.unl.edu");
+		selenium.select("css=select", "label=Renew a contract");
+		selenium.click("id=phone_no");
+		selenium.click("xpath=(//input[@id='phone_yes'])[2]");
+		selenium.click("xpath=(//input[@id='phone_no'])[3]");
+		selenium.click("css=button");
+		assertEquals("We are glad ot help you thank you very much for taking time and filling this survey! We appreciate your cooperation!", selenium.getAlert());
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		selenium.stop();
+	}
+}

@@ -1,0 +1,18 @@
+http://localhost:8080/canada.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("css=input[name=\"race \"]", "Siamese");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("xpath=(//input[@name='race '])[2]", "10");
+selenium.type("name=year_week", "3rd week of March 2015");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=Phone", "4023045473");
+selenium.select("css=select", "label=Discover");
+selenium.type("css=input[name=\"credit \"]", "89348989438934");
+selenium.type("css=input[name=\"exp \"]", "09/19");
+selenium.type("id=credit_limit", "37887 R street");
+selenium.type("id=input_name", "Lincoln");
+selenium.select("//select[2]", "label=United States");
+selenium.select("//select[2]", "label=Canada");
+selenium.select("//select[3]", "label=Nebraska");
+assertHelper.print(selenium.getSelectedLabel('''//select[2]''')); assertHelper.print(selenium.getText('''//select[3]''')); assertEquals(true, !'''Canada'''.equals(selenium.getSelectedLabel('''//select[2]''')) || !'''Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio Oklahoma Oregon Pennsylvania Rhode Island South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming Province'''.equals(selenium.getText('''//select[3]'''))); selenium.click("css=button");selenium.waitForPageToLoad("30000");

@@ -1,0 +1,11 @@
+http://localhost:8080/onlineshopping.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("xpath=(//input[@name='last '])[2]", "4023045473");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=quantity", "100000");
+selenium.select("xpath=(//select[@id='carSelect'])[2]", "label=Discover");
+selenium.type("name=quantity", "-81");
+selenium.type("name=credit", "8939832899832");
+selenium.type("xpath=(//input[@name='credit'])[2]", "09/20");
+String v = selenium.getValue('''name=quantity''');  assertEquals(true, ''''''.equals(v) || (Integer.parseInt(v)>=1 && Integer.parseInt(v)<=5)); selenium.click("css=button"); 

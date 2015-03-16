@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html>
+    <h1> Host young travellers </h1>
+    <body>
+    <br>
+    </br>
+    
+    
+    <form action="">
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+                </form>
+    
+   
+
+
+    
+<form>
+    
+  <!--
+    
+<select id="carSelect">
+    <br>
+    </br>
+<option value="volvo"> Volvo </option>
+<option value="Mercedes"> Mercedes </option>
+<option value="Opel"> opel </option>
+<option value="bmw"> BMW </option>
+
+<br>
+</br>
+</select>-->
+
+
+   <!-- color <input type="text" name="Color "><br>-->
+   <!-- chooser <input type="color" name="chooser-inp"><br> -->
+    <!-- Birthday: <input type="date" name="bday"><br> -->
+   <!--Birthday (date and time): <input type="datetime" name="bdaytime"><br>  -->
+    <!-- Birthday (date and time): <input type="datetime-local" name="bdaytime"><br> -->
+     E-mail: <input type="email" name="email"><br>
+        <!--    Birthday (month and year): <input type="month" name="bdaymonth"><br> -->
+    How many people can you host? <input type="number" name="quantity" min="1" max="5"><br>
+        <!--   Points:<input type="range" name="points" min="1" max="10">10<br> -->
+       <!--   Search Google: <input type="search" name="googlesearch"><br>-->
+         <!--    Select a time: <input type="time" name="usr_time"><br> -->
+        <!-- Add your homepage: <input type="url" name="homepage"><br> -->
+        <!--    Select a week: <input type="week" name="year_week"><br> -->
+       
+
+<br>
+</br>
+
+
+    <input type="radio" name="sex" value="male">Male<br>
+        <input type="radio" name="sex" value="female">Female
+
+<br>
+
+
+ <!--
+</br>
+    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+        <input type="checkbox" name="vehicle" value="Car">I have a car
+          </form>
+            <br>
+            </br>-->
+            <head>
+                <title>Disable</title>
+                <script>
+                    window.onload = function() {
+                        document.getElementById('phone_no').onchange = disablefield;
+                        document.getElementById('phone_yes').onchange = disablefield;
+                    }
+                
+                function disablefield()
+                {
+                    if ( document.getElementById('phone_no').checked == true ){
+                        document.getElementById('PhoneNumber').value = '';
+                        document.getElementById('PhoneNumber').disabled = true}
+                    else if (document.getElementById('phone_yes').checked == true ){
+                        document.getElementById('PhoneNumber').disabled = false;}
+                }
+                
+                    </script>
+            </head>
+            
+            
+            <br>
+            </br>
+             <form>
+            <br>
+             <action="post" method="get" name="admin">
+            Are you getting to the city by plane?
+            <br/>
+            <br>
+            </br>
+            
+            No:<input type="radio" name="Phone" value="no" id="phone_no"/>
+                    Yes:<input type="radio" name="Phone" value="yes" id="phone_yes"/>
+                    <br/>
+                    
+                    <br>
+                    </br>
+                    
+                    
+                    
+                    Which Airline Company?
+                    <select>
+                        <option value="volvo"> Spirit Airlines</option>
+                        <option value="saab">Delta Airlines</option>
+                        <option value="opel">Southwest Airlines</option>
+                        <option value="audi">American Airlines</option>
+                        <option value="audi">Amtrak</option>
+
+                    </select>
+                    
+                                        </br>
+                                        <br>
+                                        </br>
+            </form>
+           
+           
+            Phone Number: <input type="Phone_Number" name="phone"><br>
+                
+                
+                
+                <br>
+                </br>
+                <br>
+                </br>
+                <button onclick="myFunction()">Submit form</button>
+                
+                <script>
+                    function myFunction() {
+                        alert("Thank you, your form has been submitted!");
+                    }
+                </script>
+                
+
+    
+    </body>
+
+</html>

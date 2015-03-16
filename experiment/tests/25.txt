@@ -1,0 +1,7 @@
+http://localhost:8080/Airport.html
+selenium.type("name=firstname", "devine quoi?");
+selenium.type("name=lastname", "je te deteste");
+selenium.type("name=lastname", "872178871278238"); 
+selenium.type("xpath=(//input[@name='lastname'])[2]", "sunday");
+selenium.type("xpath=(//input[@name='lastname'])[3]", "8:00");
+assertEquals(true, ''''''.equals(selenium.getValue('''name=lastname''')) || !Character.isDigit(selenium.getValue('''name=lastname''').charAt(0)));selenium.click("css=button[type=\"button\"]"); assertEquals("Thank you for your submission", selenium.getAlert());

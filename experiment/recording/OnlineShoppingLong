@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>OnlineShoppingLong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">OnlineShoppingLong</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/gigony/Development/Workspace/eclipse/SeleniumExperiment/experiment/code/onlineshopping.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;first &quot;]</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;last &quot;]</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='last '])[2]</td>
+	<td>4023045473</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>mouna@cse.unl.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=quantity</td>
+	<td>100000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@id='carSelect'])[2]</td>
+	<td>label=Discover</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=quantity</td>
+	<td>-81</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=credit</td>
+	<td>8939832899832</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='credit'])[2]</td>
+	<td>09/20</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>name=quantity</td>
+	<td>-81</td>
+</tr>
+</tbody></table>
+</body>
+</html>

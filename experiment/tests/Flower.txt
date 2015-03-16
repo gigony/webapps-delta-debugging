@@ -1,0 +1,15 @@
+http://localhost:8080/flowerslist.html
+selenium.selectWindow("null");
+selenium.type("name=firstname", "Mouna");
+selenium.type("name=lastname", "Hammoudi");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=quantity", "1");
+selenium.type("name=quantity", "2");
+selenium.type("name=quantity", "3");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.click("id=phone_yes");
+selenium.click("id=phone_no"); assertEquals(false, selenium.isChecked('''id=phone_no''') && selenium.isEditable("css=select"));
+selenium.select("css=select", "label=Camellia");
+selenium.type("name=phone", "4023045473");
+selenium.click("css=button");
+assertEquals("Thank you, your form has been submitted!", selenium.getAlert());

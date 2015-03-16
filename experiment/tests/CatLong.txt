@@ -1,0 +1,14 @@
+http://localhost:8080/catform.html
+selenium.type("css=input[name=\"first \"]", "Duchesse");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("css=input[name=\"race \"]", "Siamese");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("xpath=(//input[@name='race '])[2]", "10");
+selenium.type("name=year_week", "3rd week of March 2015");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=Phone", "4023045473");
+selenium.type("css=input[name=\"credit \"]", "879667543456");
+selenium.type("css=input[name=\"exp \"]", "17/18");
+selenium.click("id=phone_yes");
+selenium.type("id=PhoneNumber", "7 months");
+assertEquals(false, ('''on'''.equals(selenium.getValue('''id=phone_yes''')) && selenium.isEditable('''id=phone_no''')) || '''on'''.equals(selenium.getValue('''id=phone_no''')) && !selenium.isEditable('''id=phone_no''')); selenium.click("css=button");

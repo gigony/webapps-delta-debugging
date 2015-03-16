@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://timeclockv3.dev.10.211.128.220.xip.io/" />
+<title>Order</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Order</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/mouna/Desktop/Recordings/order.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=comments</td>
+	<td>No comment</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=name_first</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=name_last</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>mouna@cse.unl.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=address1</td>
+	<td>873287 G street</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=city</td>
+	<td>Lincoln</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=state</td>
+	<td>usa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=zip</td>
+	<td>37878</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=phone</td>
+	<td>8765673562</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=fax</td>
+	<td>23332</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=same_flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=same_flag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=order_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>first false</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

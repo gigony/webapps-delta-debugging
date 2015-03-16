@@ -1,0 +1,14 @@
+http://localhost:8080/game.html
+selenium.type("name=fn", "781287218");
+selenium.type("xpath=(//input[@name='fn'])[2]", "jkdsjk");
+selenium.selectWindow("null");
+selenium.type("xpath=(//input[@name='fn'])[3]", "09/09/1991");
+selenium.click("name=fem");
+selenium.type("xpath=(//input[@name='fn'])[4]", "0664617857");
+selenium.type("xpath=(//input[@name='fn'])[5]", "J street 21");
+selenium.type("xpath=(//input[@name='fn'])[6]", "100000000");
+assertEquals(true, ''''''.equals(selenium.getValue('''name=fn''')) || !Character.isDigit(selenium.getValue('''name=fn''').charAt(0)));selenium.click("css=button[type=\"button\"]");
+assertEquals(true, ''''''.equals(selenium.getValue('''name=fn''')) || !Character.isDigit(selenium.getValue('''name=fn''').charAt(0)));selenium.click("css=button[type=\"button\"]");
+assertEquals(true, ''''''.equals(selenium.getValue('''name=fn''')) || !Character.isDigit(selenium.getValue('''name=fn''').charAt(0)));selenium.click("css=button[type=\"button\"]");
+assertEquals(true, ''''''.equals(selenium.getValue('''name=fn''')) || !Character.isDigit(selenium.getValue('''name=fn''').charAt(0)));selenium.click("css=button[type=\"button\"]");
+assertEquals(true, ''''''.equals(selenium.getValue('''name=fn''')) || !Character.isDigit(selenium.getValue('''name=fn''').charAt(0)));selenium.click("css=button[type=\"button\"]");

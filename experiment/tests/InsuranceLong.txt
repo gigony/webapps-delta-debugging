@@ -1,0 +1,11 @@
+http://localhost:8080/student.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("xpath=(//input[@name='last '])[2]", "4023045473");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.select("css=select", "label=INCROYAL");
+selenium.click("id=phone_yes");
+selenium.type("name=lastname", "Mouna");
+selenium.type("name=pwd", "sdjhhdshjdjksjkdsjk");
+selenium.type("xpath=(//input[@name='pwd'])[2]", "hjskkjsdjks");
+assertEquals(false, !''''''.equals(selenium.getValue('''name=pwd''')) && !selenium.getValue('''name=pwd''').equals(selenium.getValue('''xpath=(//input[@name='pwd'])[2]'''))); selenium.click("css=button");assertEquals("Thank you very much, we will process your request shortly! ", selenium.getAlert());

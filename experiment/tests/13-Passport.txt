@@ -1,0 +1,10 @@
+http://localhost:8080/passport.html
+selenium.type("name=firstname", "Yasmine");
+selenium.type("name=lastname", "Hammoudi");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("css=input[name=\"Social Seurity Number\"]", "32988972387");
+selenium.type("name=Address", "Rue Jaafar essadik");
+selenium.type("id=datepicker", "02/06/1997");assertEquals("on", selenium.getValue("id=chkBox"));
+selenium.type("xpath=(//input[@name='Social Seurity Number'])[2]", "Mouna");
+selenium.type("xpath=(//input[@name='Address'])[2]", "Moroccan");
+selenium.click("css=button");assertEquals("Thank you, your application has been submitted successfully!", selenium.getAlert());

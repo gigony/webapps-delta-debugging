@@ -1,0 +1,10 @@
+http://localhost:8080/dentist%20form%20.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("name=year_week", "djfhhddsds");
+selenium.selectWindow("null");assertEquals("09/09/2017", selenium.getText("name=year_week"));
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=Phone", "4023045473");
+selenium.select("css=select", "label=Tartar Removal");
+selenium.click("id=phone_no");
+selenium.click("css=button");assertEquals("Thank you very much for your submission, you will receive a confirmation message shortly!", selenium.getAlert());

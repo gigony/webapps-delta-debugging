@@ -1,0 +1,11 @@
+http://localhost:8080/30.html
+@state=0;
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("name=year_week", "3rd week of March 2015");
+selenium.type("name=email", "dshjkdsjkdkjsjkdsjk`1"); state++;
+selenium.type("name=Phone", "4023045473");
+selenium.select("css=select", "label=Family");
+selenium.click("id=phone_no");
+selenium.click("css=button");
+assertEquals(0, state); assertEquals("Thank you very much for your submission, you will receive a confirmation message shortly!", selenium.getAlert());

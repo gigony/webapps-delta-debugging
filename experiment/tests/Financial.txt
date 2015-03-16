@@ -1,0 +1,7 @@
+http://localhost:8080/FinancialAid.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.click("id=phone_yes");
+selenium.click("xpath=(//input[@id='phone_no'])[2]");
+assertEquals(false, ''''''.equals(selenium.getValue("xpath=(//input[@name='last '])[2]")));selenium.click("css=button");assertEquals("Thank you very much, we will process your request shortly!", selenium.getAlert());

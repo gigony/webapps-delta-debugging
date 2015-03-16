@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8000/" />
+<title>ReorderLong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ReorderLong</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/Reorder.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=fn</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='fn'])[2]</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=fem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='fn'])[4]</td>
+	<td>403746784</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='fn'])[5]</td>
+	<td>67837 B street</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='fn'])[6]</td>
+	<td>678654</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>css=#sortable2 &gt; li.ui-state-default</td>
+	<td>//ul[@id='sortable2']/li[3]</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//ul[@id='sortable']/li[1]</td>
+	<td>//ul[@id='sortable']/li[3]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.clicked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=result-text</td>
+	<td>E,R,P,R,O</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=result-text</td>
+	<td>E,R,P,R,O</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

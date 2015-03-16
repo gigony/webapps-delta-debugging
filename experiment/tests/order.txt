@@ -1,0 +1,16 @@
+http://localhost:8080/order.html
+@state = 0;
+selenium.type("name=comments", "No comment");
+selenium.type("name=name_first", "Mouna");
+selenium.type("name=name_last", "Hammoudi");
+selenium.type("name=email", "mouna@cse.unl.edu"); 
+selenium.type("name=address1", "873287 G street");
+selenium.type("name=city", "Lincoln");
+selenium.type("name=state", "usa");
+selenium.type("name=zip", "37878");
+selenium.type("name=phone", "8765673562");
+selenium.type("name=fax", "23332");
+selenium.click("name=same_flag"); state++;
+selenium.click("name=same_flag"); state++; assertEquals(false, state > 1 && state%2 == 0);
+selenium.click("name=order_type");
+selenium.click("css=input[type=\"button\"]"); assertEquals("first false", selenium.getAlert());

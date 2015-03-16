@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 
 <html>
-    <h1> Rent a Car </h1>
+    <h1> Please fill out your Car Information </h1>
     <body>
     <br>
     </br>
@@ -11,52 +11,80 @@
     
     
 <form>
-<select id="carSelect">
-    <br>
-    </br>
-<option value="volvo"> Volvo </option>
-<option value="Mercedes"> Mercedes </option>
-<option value="Opel"> opel </option>
-<option value="bmw"> BMW </option>
+ 
+   Do you have an insurance?
+<br>
+
 
 <br>
-</br>
-</select>
+<input type="checkbox" name="vehicle" value="Bike">Yes I do<br>
+   
+    <input type="checkbox" name="vehicle" value="Car">No I don't
+        <br>
+        </br>
+        <h1>Please fill out the following lines just if you answered yes to the previous question</h1>
+        Car Brand:
+        <select id="carSelect">
+            <br>
+            </br>
+            <option value="volvo"> Volvo </option>
+            <option value="Mercedes"> Mercedes </option>
+            <option value="Opel"> opel </option>
+            <option value="bmw"> BMW </option>
+        </select>
+        <br>
+        </br>
 
-<br>
-</br>
-
-    <br>
-    </br>
-   color <input type="text" name="Color "><br> 
+   Color of car <input type="text" name="Color "><br>
    <!-- chooser <input type="color" name="chooser-inp"><br> -->
     <!-- Birthday: <input type="date" name="bday"><br> -->
    <!--Birthday (date and time): <input type="datetime" name="bdaytime"><br>  -->
     <!-- Birthday (date and time): <input type="datetime-local" name="bdaytime"><br> -->
     <!-- E-mail: <input type="email" name="email"><br> -->
         <!--    Birthday (month and year): <input type="month" name="bdaymonth"><br> -->
-    Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5"><br>
-        Points:<input type="range" name="points" min="1" max="10">10<br>
-        Search Google: <input type="search" name="googlesearch"><br>
+        
+       
+        Year purchased <input type="text" name="Color "><br>
+            
+        Rate the quality of your car: <input type="range" name="points" min="1" max="10">10<br>
+        <!--Search Google: <input type="search" name="googlesearch"><br>-->
          <!--    Select a time: <input type="time" name="usr_time"><br> -->
         <!-- Add your homepage: <input type="url" name="homepage"><br> -->
         <!--    Select a week: <input type="week" name="year_week"><br> -->
        
 
-<br>
-</br>
 
 
-    <input type="radio" name="sex" value="male">Male<br>
-        <input type="radio" name="sex" value="female">Female
+   <!-- <input type="radio" name="sex" value="male">Male<br>
+        <input type="radio" name="sex" value="female">Female-->
+   
+       <!--  <action="post" method="get" name="admin"> -->
+       <!-- Have a phone?:-->
+       <!--  <br/>-->
+       
+       
+        
+        <br/>       <b><h3>Insurance Company Information </h3></b>
+       </br>
+      Company Name: <input name="PhoneNumber" type="text" id="PhoneNumber" size="25" />
+      <br>
+       <br/>
+      Company Address:
+       <input name="LastName" type="text" size="25" />
+       
+       <br>
+       </br>
+       Company Phone Number:
+        <input name="LastName" type="text" size="25" />
 
-<br>
-</br>
-    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
-        <input type="checkbox" name="vehicle" value="Car">I have a car
-          </form>
-            <br>
-            </br>
+       
+       <br>
+       </br>
+   </form>
+
+
+
+
             <head>
                 <title>Disable</title>
                 <script>
@@ -78,30 +106,21 @@
             </head>
             
             
-            <br>
-            </br>
-             <form>
-            <br>
-             <action="post" method="get" name="admin">
-            Have a phone?:
-            <br/>
-            
-            
-            No:<input type="radio" name="Phone" value="no" id="phone_no"/>
-                    Yes:<input type="radio" name="Phone" value="yes" id="phone_yes"/>
-                    <br/>
-                    Phone:
-                    <input name="PhoneNumber" type="tel" id="PhoneNumber" size="25" />
-                    <br/>
-                    Last Name:
-                    <input name="LastName" type="text" size="25" />
-                    
-                    <br>
-                    </br>
-            </form>
+           <button type="button" onclick="myFunction()">Submit your form</button>
+           <script>
+               $(document).ready(function(){
+                                 $("button").click(function(){
+                                                   $("p").hide(1000);
+                                                   alert("The paragraph is now hidden");
+                                                   });
+                                 });
+               </script>
            
-    
-    
+           <script>
+               function myFunction() {
+                   alert("Thank you very much for your submission, we will contact you shortly!");
+               }
+           </script>
     </body>
 
 </html>

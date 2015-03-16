@@ -1,0 +1,12 @@
+http://localhost:8080/Phone.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("xpath=(//input[@name='last '])[2]", "Yasmine");
+assertEquals("empty", selenium.getText("xpath=(//input[@name='last '])[2]"));
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.select("css=select", "label=Renew a contract");
+selenium.click("id=phone_no");
+selenium.click("xpath=(//input[@id='phone_yes'])[2]");
+selenium.click("xpath=(//input[@id='phone_no'])[3]");
+selenium.click("css=button");
+assertEquals(true, (selenium.isChecked('''id=phone_no''') || selenium.isChecked('''xpath=(//input[@id='phone_yes'])[2]''')) && (selenium.isChecked('''xpath=(//input[@id='phone_no'])[2]''') || selenium.isChecked('''id=phone_yes''')) && (selenium.isChecked('''xpath=(//input[@id='phone_no'])[3]''') || selenium.isChecked('''xpath=(//input[@id='phone_yes'])[3]'''))); assertEquals("We are glad ot help you thank you very much for taking time and filling this survey! We appreciate your cooperation!", selenium.getAlert());

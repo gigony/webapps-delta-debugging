@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>AccountLong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">AccountLong</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/gigony/Development/Workspace/eclipse/SeleniumExperiment/experiment/code/Account.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sex'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;Phone Number&quot;]</td>
+	<td>4023045465</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Address</td>
+	<td>573 Y street</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=datepicker</td>
+	<td>09/09/1991</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=uname</td>
+	<td>mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=upass</td>
+	<td>dsdsjkjk</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=reupass</td>
+	<td>jkdjkdsjkjkdsjkds</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sex'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Both password inputs do not match. Please retry.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=reupass</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=upass</td>
+	<td>MounaCamelia</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=reupass</td>
+	<td>MounaCamelia</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Thank you for creating account with us!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=upass</td>
+	<td>Merde</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=reupass</td>
+	<td>Merde2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Both password inputs do not match. Please retry.</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

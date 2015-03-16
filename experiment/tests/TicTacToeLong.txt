@@ -1,0 +1,71 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.regex.Pattern;
+import static org.apache.commons.lang3.StringUtils.join;
+
+public class TicTacToeLong {
+	private Selenium selenium;
+
+	@Before
+	public void setUp() throws Exception {
+		WebDriver driver = new FirefoxDriver();
+		String baseUrl = "http://129.93.164.127:4647/";
+		selenium = new WebDriverBackedSelenium(driver, baseUrl);
+	}
+
+	@Test
+	public void testTicTacToeLong() throws Exception {
+		selenium.open("file:///Users/mouna/Documents/TestJavascript/code/TicTacToe.html");
+		selenium.type("name=firstname", "Mouna");
+		selenium.type("name=lastname", "Hammoudi");
+		selenium.type("name=email", "mouna@cse.unl.edu");
+		selenium.type("name=PhoneNumber", "4023045473");
+		selenium.click("name=friend");
+		selenium.click("document.live.friend[1]");
+		selenium.click("name=sqr2");
+		selenium.click("name=sqr3");
+		selenium.click("name=sqr6");
+		selenium.click("name=sqr5");
+		selenium.click("name=sqr4");
+		selenium.click("name=sqr1");
+		selenium.click("name=sqr7");
+		selenium.click("name=sqr8");
+		selenium.click("name=sqr9");
+		selenium.click("name=sqr6");
+		assertEquals("name=sqr5", join(selenium.getAllFields(), ','));
+		selenium.click("name=sqr5");
+		selenium.click("name=sqr2");
+		selenium.click("name=sqr1");
+		selenium.click("name=sqr4");
+		selenium.click("name=sqr7");
+		selenium.click("name=sqr8");
+		selenium.click("name=sqr5");
+		selenium.click("name=sqr6");
+		selenium.click("name=sqr3");
+		selenium.click("name=sqr2");
+		selenium.click("name=sqr5");
+		selenium.click("name=sqr4");
+		selenium.click("name=sqr1");
+		selenium.click("name=sqr4");
+		selenium.click("name=sqr7");
+		selenium.click("name=sqr8");
+		selenium.click("name=sqr5");
+		selenium.click("name=sqr6");
+		selenium.click("name=sqr9");
+		selenium.click("name=sqr8");
+		selenium.click("name=sqr2");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		selenium.stop();
+	}
+}

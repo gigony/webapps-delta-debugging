@@ -1,0 +1,9 @@
+http://localhost:8080/Bpooladmin.html
+selenium.click("name=erase"); 
+selenium.click("xpath=(//input[@name='erase'])[2]");
+selenium.click("name=erase");
+selenium.click("xpath=(//input[@name='erase'])[2]");
+selenium.click("name=erase");
+selenium.click("name=erase"); assertEquals(true, selenium.isChecked("name=erase"));
+selenium.click("xpath=(//input[@name='erase'])[2]");
+selenium.click("name=erase");

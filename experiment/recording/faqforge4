@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://faqforgev4.dev.10.211.128.220.xip.io/" />
+<title>Failure4</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Failure4</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=formuser</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=formpassword</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newTitle</td>
+	<td>Top Topic</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newContext</td>
+	<td>general</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newOrder</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newTitle</td>
+	<td>Second Topic</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newContext</td>
+	<td>Software Engineering</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=newParent</td>
+	<td>label=Top Topic (id=1)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newOrder</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newTitle</td>
+	<td>Third Topic</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newContext</td>
+	<td>Testing</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=newParent</td>
+	<td>label=Second Topic (id=2)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newOrder</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Third Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>Software Testing is Good!<br />Web Testing is Better!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='action'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Commit Changes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Second Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>Software Engineering is what we do!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='action'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Commit Changes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Your Document</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Top Topic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>This is General page</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='action'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Commit Changes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Your Document</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=small &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>FaqForge - HOWTO's List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Second Topic')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Second Topic')])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

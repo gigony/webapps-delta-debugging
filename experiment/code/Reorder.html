@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+
+<style type="text/css">
+<!--
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+#sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 50px; height: 60px; font-size: 4em; text-align: center; }
+
+
+#sortable2 { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+#sortable2 li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 50px; height: 60px; font-size: 4em; text-align: center; }
+
+-->
+</style>
+</head>
+
+<body>
+    First Name: <input type="text" name="fn"></br>
+    Last Name: <input type="text" name="fn"></br>
+     Birthday <input type="date" name="fn"></br>
+    <input type="radio" name="fem"> Female</br>
+    <input type="radio" name="fem">Male</br> 
+    Phone Number: <input type="tel" name="fn"></br>
+    Address: <input type="text" name="fn"></br>
+    Postal Code: <input type="text" name="fn"></br>
+</br>
+<h2> Play a game </h2>
+<ul id="sortable">
+ 
+   <li class="ui-state-default" custom-cl="P" >P</li> 
+   <li class="ui-state-default" custom-cl="E" >E</li> 
+   <li class="ui-state-default" custom-cl="R" >R</li> 
+   <li class="ui-state-default" custom-cl="R" >R</li> 
+   <li class="ui-state-default" custom-cl="O" >O</li> 
+</ul>
+    
+    <ul class="pager">
+      <div class="clicked"><button type="button">Next</button></div>
+      <div id="result-text"></div>
+</ul> 
+    <br>
+        
+    </br>
+  <br>
+    </br>
+<ul id="sortable2">
+  
+   <li class="ui-state-default" custom-cl="D" >Y</li> 
+   <li class="ui-state-default" custom-cl="I" >I</li> 
+   <li class="ui-state-default" custom-cl="E" >D</li> 
+   <li class="ui-state-default" custom-cl="G" >E</li> 
+   <li class="ui-state-default" custom-cl="O" >U</li> 
+</ul>
+<script>
+$(function() {
+
+    $(" #sortable ").sortable({axis: "x", containment: "window"});
+     $(" #sortable2 ").sortable({axis: "x", containment: "window"});
+    $( ".clicked" ).click( function() {
+
+       var sortedIDs = $( "#sortable" ).sortable( "toArray", {attribute: 'custom-cl'} );
+       document.getElementById("result-text").innerHTML = sortedIDs;
+
+   var target = "http://localhost:3000/langs";
+
+       $.ajax({
+         type: 'get',
+         url: target + '?order='+sortedIDs.join(',') ,
+         dataType: 'script'
+       }); 
+    });     
+});
+</script>
+ 
+</body>
+</html>

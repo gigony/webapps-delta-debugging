@@ -1,0 +1,32 @@
+http://localhost:8080/18-Appointment.html
+selenium.type("id=name", "Mouna");
+selenium.type("id=address", "Student");
+selenium.type("id=email", "mouna@cse.unl.edu");
+selenium.type("id=phone_number", "398980098");
+selenium.type("id=mobile_number", "398980098");
+selenium.click("id=yes_drives");
+selenium.click("id=22to34");
+selenium.click("id=any_time");
+selenium.click("name=mon_morn");
+selenium.click("name=tue_morn");
+selenium.click("name=wed_morn");
+selenium.click("name=thur_morn");
+selenium.click("name=fri_morn");
+selenium.click("name=sat_morn");
+selenium.click("name=sun_morn");
+selenium.click("name=sun_afternoon");
+selenium.click("name=sat_afternoon");
+selenium.click("name=fri_afternoon");
+selenium.click("name=thur_afternoon");
+selenium.click("name=wed_afternoon");
+selenium.click("name=tue_afternoon");
+selenium.click("name=mon_afternoon");
+selenium.click("name=mon_evening");
+selenium.click("name=tue_evening");
+selenium.click("name=wed_evening");
+selenium.click("name=thur_evening");
+selenium.click("name=fri_evening");
+selenium.click("name=sat_evening");
+selenium.click("name=sun_evening");
+int count = 0; if('''on'''.equals(selenium.getValue('''name=mon_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=tue_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=wed_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=thur_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=fri_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=sat_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=sun_morn'''))) count++;if('''on'''.equals(selenium.getValue('''name=mon_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=tue_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=wed_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=thur_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=fri_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=sat_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=sun_afternoon'''))) count++;if('''on'''.equals(selenium.getValue('''name=mon_evening'''))) count++;if('''on'''.equals(selenium.getValue('''name=tue_evening'''))) count++;if('''on'''.equals(selenium.getValue('''name=wed_evening'''))) count++;if('''on'''.equals(selenium.getValue('''name=thur_evening'''))) count++;if('''on'''.equals(selenium.getValue('''name=fri_evening'''))) count++;if('''on'''.equals(selenium.getValue('''name=sat_evening'''))) count++;if('''on'''.equals(selenium.getValue('''name=sun_evening'''))) count++;assertEquals(true, count<=4); selenium.click("id=submit");
+

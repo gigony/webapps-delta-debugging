@@ -1,0 +1,9 @@
+http://localhost:8080/Numbers.html
+selenium.type("name=firstname", "30");
+selenium.type("name=lastname", "30");
+selenium.type("name=rara", "30");
+selenium.click("name=Button1");
+selenium.addSelection("id=theList", "label=one"); assertEquals(false, selenium.isAlertPresent());
+selenium.removeSelection("id=theList", "label=one"); assertEquals(false, selenium.isAlertPresent());
+selenium.removeSelection("id=theList", "label=three");
+selenium.addSelection("id=theList", "label=five");

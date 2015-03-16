@@ -1,0 +1,69 @@
+<script>
+    function removeOption() {
+        var x = document.getElementById("mySelect");
+        x.remove(x.selectedIndex);
+    }
+</script>
+</head>
+<body>
+    
+    <form>
+        
+        <form>
+            First Name <input type="text" name="first "><br>
+                <br>
+                
+                Last Name <input type="text" name="last "><br>
+                    <br>
+                    
+                    
+                    Select a week for your appointment: <input type="week" name="year_week"><br>
+                        <br>
+                        E-mail: <input type="email" name="email"><br>
+                            <br>
+                            </br>
+                            Phone number: <input type="text" name="Phone"><br>
+                                <br>
+                                <br>
+                                </br>
+                                How do you want to pay? <select>
+                                    <option value="Visa">Visa</option>
+                                    <option value="American express">American express</option>
+                                    <option value="Discover">Discover</option>
+                                    <option value="MasterCard">MasterCard</option>
+                                </select>
+                                <br>
+                                </br>
+                                
+                                <h1> Cooking workshop: Fruit Salad </h1><br>
+                                <h2> Participants </h2>
+                                <h3> Mary Jackson  </h3>
+                                <h3> John Smith  </h3>
+                                <h3> Helen Williams  </h3>
+                                <h3> Kevin Simpson  </h3>
+                                
+                                <h3> Let us know which fruits we need to bring, remove the ones that you have from the list </h3>
+                                
+                                
+                                <select id="mySelect">
+                                    <option>Apple</option>
+                                    <option>Pear</option>
+                                    <option>Banana</option>
+                                    <option>Orange</option>
+                                    <option>Mango</option>  
+                                    <option>Pineapple</option>
+                                    <option>Strawberry</option>
+                                    <option>Kiwi</option>
+                                    
+                                </select>
+                                <br>
+                                </br>
+                                <tr> 
+                                    <td></td> 
+                                    
+                                    
+                                    <input type="button" onclick="rrremoveOption()" value="Remove the fruit from the list " value='Send'>
+        </form>
+        
+</body>
+</html>

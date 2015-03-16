@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>CatLong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CatLong</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/gigony/Development/Workspace/eclipse/SeleniumExperiment/experiment/code/catform.html?first+=Duchesse&amp;last+=Hammoudi&amp;race+=Siamese&amp;sex=female&amp;race+=10&amp;year_week=3rd+week+of+March+2015&amp;email=mouna%40cse.unl.edu&amp;Phone=4023045473&amp;credit+=879667543456&amp;exp+=17%2F18&amp;Phone=yes&amp;PhoneNumber=7+months+</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;first &quot;]</td>
+	<td>Duchesse</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;last &quot;]</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;race &quot;]</td>
+	<td>Siamese</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sex'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='race '])[2]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=year_week</td>
+	<td>3rd week of March 2015</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>mouna@cse.unl.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Phone</td>
+	<td>4023045473</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;credit &quot;]</td>
+	<td>879667543456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;exp &quot;]</td>
+	<td>17/18</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=phone_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PhoneNumber</td>
+	<td>7 months </td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=phone_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

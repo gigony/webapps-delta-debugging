@@ -1,0 +1,9 @@
+http://localhost:8080/29.html
+selenium.type("css=input[name=\"first \"]", "coucou");
+selenium.type("css=input[name=\"last \"]", "1223832998");
+selenium.type("name=year_week", "4th week March");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=Phone", "89328778");
+selenium.select("css=select", "label=Soare Throat");
+selenium.click("id=phone_no");
+assertEquals(true, ''''''.equals(selenium.getValue('''css=input[name=\"last \"]''')) || !Character.isDigit(selenium.getValue('''css=input[name=\"last \"]''').charAt(0)));selenium.click("css=button");assertEquals("Thank you very much for your submission, you will receive a confirmation message shortly!", selenium.getAlert());

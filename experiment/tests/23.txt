@@ -1,0 +1,11 @@
+http://localhost:8080/StudentInfo.html
+@state = 0;
+selenium.type("name=firstname", "mouna");
+selenium.type("name=lastname", "hammoudi");
+selenium.type("name=Username", "8899990000");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("id=demo", "989"); state++;
+selenium.click("css=button[type=\"button\"]");
+selenium.click("xpath=(//input[@name='Studies'])[2]");
+selenium.click("name=Studies");
+selenium.click("css=input[type=\"button\"]");assertEquals(true, state == 0); assertEquals("thank you very much for your submission! ", selenium.getAlert());

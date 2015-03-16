@@ -1,0 +1,45 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.regex.Pattern;
+import static org.apache.commons.lang3.StringUtils.join;
+
+public class Reorder2 {
+	private Selenium selenium;
+
+	@Before
+	public void setUp() throws Exception {
+		WebDriver driver = new FirefoxDriver();
+		String baseUrl = "http://localhost:8000/";
+		selenium = new WebDriverBackedSelenium(driver, baseUrl);
+	}
+
+	@Test
+	public void testReorder2() throws Exception {
+		selenium.open("/Reorder.html");
+		selenium.type("name=fn", "Mouna");
+		selenium.type("xpath=(//input[@name='fn'])[2]", "Hammoudi");
+		selenium.click("name=fem");
+		selenium.type("xpath=(//input[@name='fn'])[4]", "403746784");
+		selenium.type("xpath=(//input[@name='fn'])[5]", "67837 B street");
+		selenium.type("xpath=(//input[@name='fn'])[6]", "678654");
+		selenium.dragAndDrop("css=#sortable2 > li.ui-state-default", "//ul[@id='sortable2']/li[3]");
+		selenium.dragAndDropToObject("//ul[@id='sortable']/li[1]", "//ul[@id='sortable']/li[3]");
+		selenium.click("css=div.clicked");
+		assertEquals("E,R,P,R,O", selenium.getText("id=result-text"));
+		selenium.click("css=button[type=\"button\"]");
+		assertEquals("E,R,P,R,O", selenium.getText("id=result-text"));
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		selenium.stop();
+	}
+}

@@ -1,0 +1,11 @@
+http://localhost:8080/Reorder.html
+selenium.type("name=fn", "Mouna");
+selenium.type("xpath=(//input[@name='fn'])[2]", "Hammoudi");
+selenium.click("name=fem");
+selenium.type("xpath=(//input[@name='fn'])[4]", "403746784");
+selenium.type("xpath=(//input[@name='fn'])[5]", "67837 B street");
+selenium.type("xpath=(//input[@name='fn'])[6]", "678654");
+selenium.dragAndDropToObject("css=#sortable2 > li.ui-state-default", "//ul[@id='sortable2']/li[3]");
+selenium.dragAndDropToObject("//ul[@id='sortable']/li[1]", "//ul[@id='sortable']/li[3]");
+selenium.click("css=div.clicked");assertEquals(false, !''''''.equals(selenium.getText("id=result-text")));
+selenium.click("css=button[type=\"button\"]");

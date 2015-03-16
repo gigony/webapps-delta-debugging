@@ -24,7 +24,27 @@
                                         <li class="ui-state-default" custom-cl="O" >O</li>
                                         
                                     </ul>
-                                    
+                                    <script>
+                                        $(function() {
+                                          
+                                          $(" #sortable ").sortable({axis: "x", containment: "window"});
+                                          $(" #sortable2 ").sortable({axis: "x", containment: "window"});
+                                          $( ".clicked" ).click( function() {
+                                                                
+                                                                var sortedIDs = $( "#sortable" ).sortable( "toArray", {attribute: 'custom-cl'} );
+                                                                alert(sortedIDs);
+                                                                
+                                                                var target = "http://localhost:3000/langs";
+                                                                
+                                                                $.ajax({
+                                                                       type: 'get',
+                                                                       url: target + '?order='+sortedIDs.join(',') ,
+                                                                       dataType: 'script'
+                                                                       });
+                                                                });
+                                          });(4, 3);
+                                        </script>
+
                                     <ul class="pager">
                                         <div class="clicked"><button type="button">Next</button></div>
                                     </ul>
@@ -43,28 +63,8 @@
                                         <li class="ui-state-default" custom-cl="E" >D</li> 
                                         <li class="ui-state-default" custom-cl="G" >E</li> 
                                         <li class="ui-state-default" custom-cl="O" >U</li> 
+                                   
+                                   
                                     </ul>
-                                    <script>
-                                        $(function() {
-                                          
-                                          $(" #sortable ").sortable({axis: "x", containment: "window"});
-                                          $(" #sortable2 ").sortable({axis: "x", containment: "window"});
-                                          $( ".clicked" ).click( function() {
-                                                                
-                                                                var sortedIDs = $( "#sortable" ).sortable( "toArray", {attribute: 'custom-cl'} );
-                                                                alert(sortedIDs);
-                                                                
-                                                                var target = "http://localhost:3000/langs";
-                                                                
-                                                                $.ajax({
-                                                                       type: 'get',
-                                                                       url: target + '?order='+sortedIDs.join(',') ,
-                                                                       dataType: 'script'
-                                                                       }); 
-                                                                });     
-                                          });(4, 3);
-                                        </script>
-                                    
-                                    
                                     
 </body>

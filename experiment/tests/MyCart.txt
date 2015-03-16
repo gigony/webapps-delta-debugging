@@ -1,0 +1,16 @@
+http://localhost:8080/cart.html
+@value="2";
+selenium.type("name=data1", "3"); value="3"
+selenium.click("id=Update");selenium.waitForPageToLoad("30000"); assertEquals(value, selenium.getValue("name=data1"));
+selenium.type("name=data1", "10"); value="10"
+selenium.click("id=Update");selenium.waitForPageToLoad("30000"); assertEquals(value, selenium.getValue("name=data1"));
+selenium.type("name=data1", "5"); value="5"
+selenium.click("id=Update");selenium.waitForPageToLoad("30000"); assertEquals(value, selenium.getValue("name=data1"));
+selenium.type("name=data1", "5"); value="5"
+selenium.click("id=Update");selenium.waitForPageToLoad("30000"); assertEquals(value, selenium.getValue("name=data1"));
+selenium.type("name=data1", "10"); value="10"
+selenium.click("id=Update");selenium.waitForPageToLoad("30000"); assertEquals(value, selenium.getValue("name=data1"));
+selenium.click("css=form > input.submit");selenium.waitForPageToLoad("30000"); assertEquals(false, selenium.isElementPresent("name=data1"));
+selenium.type("name=data1", "3"); value="3"
+selenium.click("id=Update");selenium.waitForPageToLoad("30000"); assertEquals(value, selenium.getValue("name=data1"));
+selenium.click("css=form > input.submit");selenium.waitForPageToLoad("30000"); assertEquals(false, selenium.isElementPresent("name=data1"));

@@ -1,0 +1,12 @@
+http://localhost:8080/Birthday.html
+selenium.type("name=firstname", "Mouna");
+selenium.type("name=lastname", "Hammoudi");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("css=input[name=\"Social Seurity Number\"]", "7837887782387783");
+selenium.type("name=Address", "787 R street");
+selenium.type("id=datepicker", "09/09/1991");
+selenium.click("id=all"); assertEquals(true, selenium.isChecked('''id=title_1''') && selenium.isChecked('''id=title_2'''));
+selenium.click("id=title_1");
+selenium.click("id=title_2");
+selenium.click("css=button");
+assertEquals("Thank you, your form has been submitted!", selenium.getAlert());

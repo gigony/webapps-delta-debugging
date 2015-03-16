@@ -1,0 +1,17 @@
+http://faqforgev4.dev.10.211.128.220.xip.io/
+@selenium.type("name=username", "test");
+@selenium.type("name=password", "test");
+@selenium.click("css=input[type=\"submit\"]");
+selenium.click('''link=Administration'''); selenium.waitForPageToLoad('''30000''');
+selenium.type('''name=formuser''', '''test''');
+selenium.type('''name=formpassword''', '''test''');
+selenium.click('''name=submit'''); selenium.waitForPageToLoad('''30000''');
+selenium.type('''name=newTitle''', '''Top Topic''');
+selenium.click('''css=input[type=\"submit\"]'''); selenium.waitForPageToLoad('''30000''');
+selenium.type('''name=newTitle''', '''Second Topic''');
+selenium.select('''name=newParent''', '''label=Top Topic (id=1)''');
+selenium.click('''css=input[type=\"submit\"]'''); selenium.waitForPageToLoad('''30000''');
+selenium.select('''name=newParent''', '''label=Second Topic (id=2)''');
+selenium.click('''css=input[type=\"submit\"]'''); selenium.waitForPageToLoad('''30000''');
+selenium.open('''http://faqforgev4.dev.10.211.128.220.xip.io'''); selenium.waitForPageToLoad('''30000''');
+assertHelper.assertEquals(false, '''FaqForge - HOWTO's List'''.equals(selenium.getTitle()) && selenium.isElementPresent('''xpath=(//a[contains(text(),'Second Topic')])[2]'''));

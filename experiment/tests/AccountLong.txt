@@ -1,0 +1,19 @@
+http://localhost:8080/Account.html
+selenium.type("name=firstname", "Mouna");
+selenium.type("name=lastname", "Hammoudi");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("css=input[name=\"Phone Number\"]", "4023045465");
+selenium.type("name=Address", "573 Y street");
+selenium.type("id=datepicker", "09/09/1991");
+selenium.type("name=uname", "mouna");
+selenium.type("id=upass", "dsdsjkjk");
+selenium.type("id=reupass", "jkdjkdsjkjkdsjkds");
+selenium.click("xpath=(//input[@name='sex'])[4]");
+selenium.click("css=button"); assertEquals("Both password inputs do not match. Please retry.", selenium.getAlert());
+selenium.type("id=reupass", "Mouna");
+selenium.type("id=upass", "MounaCamelia");
+selenium.type("id=reupass", "MounaCamelia");
+selenium.click("css=button"); assertEquals("Thank you for creating account with us!", selenium.getAlert());
+selenium.type("id=upass", "Merde");
+selenium.type("id=reupass", "Merde2");
+selenium.click("css=button"); assertEquals("Both password inputs do not match. Please retry.", selenium.getAlert());

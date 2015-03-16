@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>CanadaLong</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CanadaLong</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/gigony/Development/Workspace/eclipse/SeleniumExperiment/experiment/code/canada.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;first &quot;]</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;last &quot;]</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;race &quot;]</td>
+	<td>Siamese</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sex'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='race '])[2]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=year_week</td>
+	<td>3rd week of March 2015</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>mouna@cse.unl.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Phone</td>
+	<td>4023045473</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select</td>
+	<td>label=Discover</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;credit &quot;]</td>
+	<td>89348989438934</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;exp &quot;]</td>
+	<td>09/19</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=credit_limit</td>
+	<td>37887 R street</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_name</td>
+	<td>Lincoln </td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[2]</td>
+	<td>label=United States</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[2]</td>
+	<td>label=Canada</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[3]</td>
+	<td>label=Nebraska</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

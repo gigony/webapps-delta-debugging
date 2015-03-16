@@ -1,0 +1,14 @@
+http://localhost:8080/HostYoungTravellers.html
+selenium.type("name=firstname", "Mouna");
+selenium.type("name=lastname", "Hammoudi");
+selenium.type("name=quantity", "1");
+selenium.type("name=quantity", "2");
+selenium.type("name=quantity", "3");
+selenium.type("name=quantity", "4");
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.click("id=phone_yes");
+selenium.select("css=select", "label=Amtrak"); assertEquals(false, selenium.isChecked('''id=phone_yes''') && selenium.getSelectedLabel('''css=select''').equals('''Amtrak''') && '''Spirit Airlines\nDelta Airlines\nSouthwest Airlines\nAmerican Airlines\nAmtrak'''.equals(selenium.getText("css=select")));
+selenium.type("name=phone", "4023045473");
+selenium.click("css=button");
+assertEquals("Thank you, your form has been submitted!", selenium.getAlert());

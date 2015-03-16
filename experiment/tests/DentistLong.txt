@@ -1,0 +1,8 @@
+http://localhost:8080/dentistForm.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("name=year_week", "09/09/1991"); assertEquals(true, '''9 9, 1991'''.equals(selenium.getValue('''name=year_week''')));
+selenium.type("name=email", "mouna@cse.unl.edu");
+selenium.type("name=Phone", "4023045473");
+selenium.click("id=phone_no");
+selenium.click("css=button");assertEquals("Thank you very much for your submission, you will receive a confirmation message shortly!", selenium.getAlert());

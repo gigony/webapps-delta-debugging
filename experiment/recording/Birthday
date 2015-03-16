@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://129.93.164.127:4647/" />
+<title>Birthday</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Birthday</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>file:///Users/mouna/Desktop/Recordings/Birthday.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=firstname</td>
+	<td>Mouna</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=lastname</td>
+	<td>Hammoudi</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sex'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;Social Seurity Number&quot;]</td>
+	<td>7837887782387783</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Address</td>
+	<td>787 R street</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=datepicker</td>
+	<td>09/09/1991</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=title_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=title_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Thank you, your form has been submitted!</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

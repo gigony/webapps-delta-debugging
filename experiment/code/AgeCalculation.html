@@ -1,0 +1,114 @@
+<SCRIPT LANGUAGE="JAVASCRIPT">
+    <!-- hide this script tag's contents from old browsers
+    function lifetimer(){
+        
+        today = new Date()
+        
+        BirthDay = new Date(document.live.age.value)
+        
+        timeold = (today.getTime() - BirthDay.getTime());
+        
+        sectimeold = timeold / 1000;
+        
+        secondsold = Math.floor(sectimeold);
+        
+        msPerDay =  60 * 1000 ;
+        
+        timeold = (today.getTime() - BirthDay.getTime());
+        
+        e_daysold = timeold / msPerDay;
+        
+        daysold = Math.floor(e_daysold);
+        
+        e_hrsold = (e_daysold - daysold)*24;
+        
+        hrsold = Math.floor(e_hrsold);
+        
+        minsold = Math.floor((e_hrsold - hrsold)*60);
+        
+        document.live.time1.value = daysold
+        
+        document.live.time2.value = hrsold
+        
+        document.live.time3.value = minsold
+        
+        window.status = "Well at the moment you are " + secondsold + "............ seconds old.";
+        
+        timerID = setTimeout("lifetimer()",1000)
+        
+    }
+// -- done hiding from old browsers -->
+
+    </script>
+
+
+
+<FORM name="live">
+    First Name: <input type ="text" name="firstname" value="" size=30 ></br>
+        Last Name: <input type ="text" name ="lastname" value="" size =30>
+            </br>
+            
+            Email:  <input type ="text" name="email" value ="" size=30>
+                </br>
+                Phone number: <input type="Phone" name="PhoneNumber" value="" size=30>
+                    </br>
+                    <br>
+                    How did you hear about us?
+                    
+                    <br>   Friend <input type= "radio" name= "friend" value="friend"></br>
+                        Online <input type= "radio" name= "online" value="online"></br>
+                            
+                            </br>
+                            </br>
+                            
+                            
+                            Are you?
+                            </br>
+                            <br>   Student <input type= "radio" name= "friend" value="friend"></br>
+                                Professor <input type= "radio" name= "online" value="online"></br>
+                                    
+                                    Employee <input type= "radio" name= "online" value="online"></br>
+                                        
+                                        Researcher <input type= "radio" name= "online" value="online"></br>
+                                            
+                                            </br>  
+                                            </br>
+                                            <h3> Calculate your age in days, hours, minutes </h3>
+                                            Please enter your birthday:<INPUT TYPE="text" NAME="age" VALUE="" SIZE=20> 
+                                                Example: (november 1,1966) <BR><BR><BR>
+                                                <INPUT TYPE="button" NAME="start" VALUE="Start Timer" ONCLICK="lifetimer(this.form)">
+                                                    
+                                                    <INPUT TYPE="reset" NAME="resetb" VALUE="Reset Age">
+                                                        
+                                                        <BR><BR>
+                                                        
+                                                        <TABLE border=0>
+                                                            <TR><TD>You are days old:</TD>
+                                                                
+                                                                <TD>
+                                                                    
+                                                                    <INPUT TYPE="text" NAME="time1" VALUE="" size=8>
+                                                                        
+                                                                        
+                                                                        
+                                                                </TD>
+                                                                
+                                                            </TR>
+                                                            
+                                                            <TR><TD>Plus hours old:</TD>
+                                                                
+                                                                <TD>
+                                                                    
+                                                                    <INPUT TYPE="text" NAME="time2" VALUE="" size=8>
+                                                                        
+                                                                </TD>
+                                                                
+                                                            </TR>
+                                                            
+                                                            <TR><TD>Plus minutes old:</TD>
+                                                                
+                                                                <TD><INPUT TYPE="text" NAME="time3" VALUE="" size=8></TD>
+                                                                
+                                                            </TR>
+                                                        </TABLE>
+</FORM>

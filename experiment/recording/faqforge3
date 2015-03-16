@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://faqforgev3.dev.10.211.128.220.xip.io/" />
+<title>Failure3</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Failure3</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/admin/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=formuser</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=formpassword</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:???</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=topicTitle</td>
+	<td>new1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=topicContext</td>
+	<td>new1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>new text </td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newTitle</td>
+	<td>new2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newContext</td>
+	<td>new2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newOrder</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newTitle</td>
+	<td>new3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newContext</td>
+	<td>new3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newOrder</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=new3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>here is some text </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='action'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Commit Changes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=new1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>here is some text </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='action'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Commit Changes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=new2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Your Document</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[2]/small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//tr[4]/td</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete Topic&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=HERE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=new2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>chnaged text </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='action'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Commit Changes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=new2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Topics List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newTitle</td>
+	<td>newinside</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newContext</td>
+	<td>new2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=newParent</td>
+	<td>label=new2 (id=2)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=newOrder</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=newinside</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=topicTitle</td>
+	<td>newin3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=topicOrder</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=topicPublish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=faqText</td>
+	<td>another text </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a &gt; big</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//img[@alt='Logout'])[2]</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

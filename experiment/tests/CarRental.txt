@@ -1,0 +1,12 @@
+http://localhost:8080/CarRental.html
+selenium.click("xpath=(//input[@name='vehicle'])[1]");
+selenium.select("id=carSelect", "label=Mercedes");
+selenium.type("css=input[name=\"Color \"]", "Red");
+selenium.type("xpath=(//input[@name='Color '])[2]", "2006");
+selenium.type("name=points", "8");
+selenium.click("xpath=(//input[@name='vehicle'])[2]");
+selenium.type("id=PhoneNumber", "CARX");
+selenium.type("name=LastName", "2378 R street");
+selenium.type("xpath=(//input[@name='LastName'])[2]", "9875679087");
+assertEquals(false, selenium.isChecked('''xpath=(//input[@name='vehicle'])[1]''') && selenium.isChecked('''xpath=(//input[@name='vehicle'])[2]''')); selenium.click("css=button[type=\"button\"]");
+assertEquals("Thank you very much for your submission, we will contact you shortly!", selenium.getAlert());

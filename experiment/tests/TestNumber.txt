@@ -1,0 +1,12 @@
+http://localhost:8080/time.html
+selenium.type("id=demo", "-2781287892389");
+selenium.click("css=button[type=\"button\"]");value = selenium.getValue("id=demo"); assertEquals(true, value.equals("") || ( Integer.parseInt(value)>=5 && Integer.parseInt(value) <= 10));
+selenium.type("name=firstname", "Mouna");
+selenium.type("name=lastname", "Hammoudi");
+selenium.click("xpath=(//input[@name='sex'])[2]");
+selenium.type("name=pwd", "mouna");
+selenium.click("xpath=(//input[@name='vehicle'])[2]");
+selenium.type("name=user", "Mouna");
+selenium.click("//input[@value='Click me...']");
+assertEquals("thank u ", selenium.getAlert());
+selenium.click("css=input[type=\"button\"]");

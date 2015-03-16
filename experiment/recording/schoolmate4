@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://schoolmatev4.dev.10.211.128.220.xip.io/" />
+<title>Failure4</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Failure4</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=username</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=password</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Attendance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Daisy Dean</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Gordon Kline</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Parents</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Registration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Daisy Dean</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Gordon Kline</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=spring2001</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=summer2001</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=spring2001</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=spring2001</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=spring2001</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=student</td>
+	<td>label=Mark March</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=student</td>
+	<td>label=Robin Chase</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=spring2001</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td &gt; input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=semester</td>
+	<td>label=spring2001</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=student</td>
+	<td>label=Tom Doe</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=student</td>
+	<td>label=Carla Marx</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=student</td>
+	<td>label=Robin Chase</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td &gt; input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=class</td>
+	<td>label=Basic English</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td &gt; input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=font</td>
+	<td>exact:*That class interferes with another registration for this student</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Daisy Dean</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Carla Marx</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Robin Chase</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Gordon Kline</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=student</td>
+	<td>label=Robin Chase</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Announcements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=title</td>
+	<td>System error</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=message</td>
+	<td>Some student cannot register classes due to system error!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=School</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Semesters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Teachers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Students</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.students.elements['delete[]'][2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=report</td>
+	<td>label=Deficiency Report</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

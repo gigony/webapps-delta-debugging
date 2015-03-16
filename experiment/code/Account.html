@@ -1,0 +1,117 @@
+<html>
+    <head>
+         <h1> Create an account </h1>
+        <!-- Load jQuery from Google's CDN -->
+        <!-- Load jQuery UI CSS  -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        
+        <!-- Load jQuery JS -->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <!-- Load jQuery UI Main JS  -->
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        
+        <!-- Load SCRIPT.JS which will create datepicker for input field  -->
+        <script src="script.js"></script>
+        
+        <link rel="stylesheet" href="runnable.css" />
+    </head>
+    <body>
+        
+        
+        
+        <form action="">
+            First name: <input type="text" name="firstname"><br>
+                Last name: <input type="text" name="lastname">
+                    </form>
+        <form>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female
+        </form>
+        
+        <form action="">
+            Phone number: <input type="text" name="Phone Number"><br>
+             
+                    </form>
+        
+        <form action="">
+            Address: <input type="text" name="Address"><br>
+                
+                </form>
+
+        <form>
+
+        
+        <p>Birthday: <input type="text" id="datepicker" /></p>
+      
+      <form action="check.php" method="POST" id="userform" onSubmit="return passCheck()" >
+          Username:<input name="uname" type="text" />
+          <br>
+          </br>
+          Password:<input type="password" id="upass" name="upass" type="text" />
+          <br>
+          </br>
+          Retype Password:<input type="password" id="reupass" name="reupass" type="text" />
+          <br>
+          </br>
+         
+      </form>
+      
+      
+      
+      <form action="">
+          How did you hear about us?
+          
+          <br>
+          </br>
+          <input type="radio" name="sex" value="Friend">Friend
+              <br>
+              
+            <input type="radio" name="sex" value="Email">Email
+                <br>
+               
+            <input type="radio" name="sex" value="Online">Online
+                <br>
+               
+                  </form>
+        
+        
+        <button onclick="myFunction()">Create an account</button>
+        
+        <script>
+            function myFunction() {
+                
+                
+                    var pass1 = document.getElementById('upass').value;
+                    var pass2 = document.getElementById('reupass').value;
+                    if(pass1 == pass2 && pass1 == ""){
+                        return true;
+                    }
+                    else{
+                        alert("Both password inputs do not match. Please retry.");
+                        document.getElementById('userform').reset();
+                        return false;
+                    }
+                
+                
+                
+                
+                alert("Thank you for creating account with us!");
+            }
+        </script>
+
+
+            
+            
+            
+            
+        </form>
+       
+
+ </body>
+        
+       
+    
+    
+    
+    
+</html>

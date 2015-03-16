@@ -1,0 +1,10 @@
+http://localhost:8080/WaitingListClasses.html
+selenium.type("css=input[name=\"first \"]", "Mouna");
+selenium.type("css=input[name=\"last \"]", "Hammoudi");
+selenium.type("xpath=(//input[@name='last '])[2]", "4023045473");
+selenium.type("name=email", "40389988"); assertEquals(true,false);
+selenium.type("name=Phone", "4008989988");
+selenium.select("css=select", "label=CSE 775");
+selenium.click("id=phone_no");
+selenium.click("css=button");
+assertEquals("Thank you very much for your submission, we will process your request!", selenium.getAlert());
