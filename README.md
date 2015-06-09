@@ -19,4 +19,6 @@ Build and Run
 
 Please uncomment lines in `main` method of `Main.java` to run for the other test cases. (Currently, only the first 'short' test case is uncommented.)
 
+You may need FireFox web browser to run this tool and the tool was tested in OSX 10.10 (Yosemite).
+
 
