@@ -12,7 +12,7 @@ import com.google.common.hash.Hasher;
 import com.google.common.hash.Hashing;
 
 public class DDAdvancedSearch extends DD {
-  TestScript testScript;
+  Main testScript;
   String url;
   ArrayList<String> prefixEvents;
   ArrayList<String> events;
@@ -29,7 +29,7 @@ public class DDAdvancedSearch extends DD {
   int totalUnresolved = 0;
   int totalCachedUnresolved = 0;
 
-  public DDAdvancedSearch(TestScript testScript, String url, ArrayList<String> prefixEvents, ArrayList<String> events) {
+  public DDAdvancedSearch(Main testScript, String url, ArrayList<String> prefixEvents, ArrayList<String> events) {
     this.testScript = testScript;
     this.url = url;
     this.prefixEvents = prefixEvents;

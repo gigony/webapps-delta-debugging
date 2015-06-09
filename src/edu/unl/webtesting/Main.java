@@ -20,19 +20,17 @@ import java.util.Scanner;
 
 import com.thoughtworks.selenium.SeleniumException;
 
-public class TestScript {
+public class Main {
   StaticWebServer server;
-  // GroovyScriptEngine gse;
   GroovyShell shell;
   Binding binding;
   AssertHelper assertHelper;
   boolean isWebDriver = false;
 
-  private boolean doAutomation = false;
   String logFile;
   private String clearDBUrl = "";
 
-  public TestScript() {
+  public Main() {
     URL[] urls = new URL[] {};
     ClassLoader loader = new URLClassLoader(urls, Thread.currentThread().getContextClassLoader());
     this.binding = new Binding();
@@ -175,11 +173,7 @@ public class TestScript {
 
     info(String.format("There are %d events (with %d prefix events)", events.size(), prefixEvents.size()));
 
-    // do binary search
-    // SearchResult result = binarySearch(url, prefixEvents, events, 0, events.size() - 1, preservePreState, 0,
-    // events.size() - 1);
-    // info(String.format("##Minimun range of the test case:[%d, %d], size: %d/%d", result.minStart, result.minEnd,
-    // result.minEnd - result.minStart + 1, events.size()));
+    // Do Delta-Debugging to reduce test case.
     deltaDebugging(url, prefixEvents, events);
   }
 
@@ -224,47 +218,6 @@ public class TestScript {
       }
     }
     return prefixEvents;
-  }
-
-  // private SearchResult binarySearch(String url, ArrayList<String> prefixEvents, ArrayList<String> events, int start,
-  // int end, boolean preservePreState, int minStart, int minEnd) {
-  // SearchResult result = new SearchResult(false, minStart, minEnd);
-  // boolean exeResult = executeEvents(url, prefixEvents, events, start, end, preservePreState);
-  // String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
-  //
-  // if (response.equals("yes")) {
-  // if (start == end) {
-  // result.minStart = start;
-  // result.minEnd = end;
-  // } else {
-  // int mid = (start + end) / 2;
-  // result = binarySearch(url, prefixEvents,events, start, mid, preservePreState, start, end);
-  // if (!result.succeed) {
-  // result = binarySearch(url, prefixEvents, events, mid + 1, end, preservePreState, start, end);
-  // }
-  // }
-  // result.succeed = true;
-  // }
-  // return result;
-  // }
-  private SearchResult binarySearch(String url, ArrayList<String> prefixEvents, ArrayList<String> events, int start,
-      int end, boolean preservePreState, int minStart, int minEnd) {
-    boolean exeResult = executeEvents(url, prefixEvents, events, start, end, preservePreState, false);
-
-    String response = readInput("Have a failure?(yes/no)", exeResult).toLowerCase();
-
-    if (response.equals("yes")) {
-      if (start == end)
-        return new SearchResult(true, start, end);
-      int mid = (start + end) / 2;
-      SearchResult result = binarySearch(url, prefixEvents, events, start, mid, preservePreState, start, end);
-      if (!result.succeed) {
-        result = binarySearch(url, prefixEvents, events, mid + 1, end, preservePreState, start, end);
-      }
-      return new SearchResult(true, result.minStart, result.minEnd);
-    } else {
-      return new SearchResult(false, minStart, minEnd);
-    }
   }
 
   public boolean executeEvents(String url, ArrayList<String> prefixEvents, ArrayList<String> events, int start,
@@ -396,25 +349,6 @@ public class TestScript {
     return DD.PASS;
   }
 
-  private String readInput(String msg, boolean executionResult) {
-    info(msg);
-    if (doAutomation) {
-      if (executionResult) {
-        info("no");
-        return "no";
-      } else {
-        info("yes");
-        return "yes";
-      }
-    }
-    Scanner scanner = new Scanner(System.in);
-    String result = scanner.nextLine().trim();
-    info(result);
-
-    if (!result.toLowerCase().equals("yes") && !result.toLowerCase().equals("no"))
-      return readInput(msg, executionResult);
-    return result;
-  }
 
   public void info(String msg) {
     System.out.println(msg);
@@ -434,8 +368,6 @@ public class TestScript {
     if (urlAddr == null || urlAddr.equals(""))
       return;
 
-    // open(urlAddr);
-
     try {
       URL url = new URL(urlAddr);
       BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -449,49 +381,40 @@ public class TestScript {
   }
 
   public static void main(String[] args) {
-    TestScript testScript = new TestScript();
+    Main experiment = new Main();
     try {
-      testScript.init();
-      testScript.setAutomate(true);
+      experiment.init();
 
-      // testScript.run("experiment/tests/SoastaStore.txt");
-      // testScript.run("experiment/tests/BestCarsRecording.txt");
-      // testScript.run("experiment/tests/BmatchesadminRecording.txt");
-      // testScript.run("experiment/tests/BpoolAdminRecording.txt");
-      // testScript.run("experiment/tests/1.txt");
-      // testScript.run("experiment/tests/Failure1.txt", "http://faqforge.dev/clear.php", false);
-
-      // testScript.run("experiment/tests/CanadaLong.txt");
-      // testScript.run("experiment/tests/CatLong.txt");
-      // testScript.run("experiment/tests/TicTacToeLong.txt"); // doesn't work well
-      // testScript.run("experiment/tests/OnlineShoppingLong.txt");
-      // testScript.run("experiment/tests/18-Appointment.txt");
-      // testScript.run("experiment/tests/AccountLong.txt");
-      // testScript.run("experiment/tests/AgeLong.txt");
-      // testScript.run("experiment/tests/TravellersLong.txt");
-      // testScript.run("experiment/tests/Flower.txt");
-      // testScript.run("experiment/tests/ReorderLong.txt");
-      // testScript.run("experiment/tests/Cook.txt");
-      // testScript.run("experiment/tests/MyCart.txt");
-      // testScript.run("experiment/tests/TestNumber.txt");
-      // testScript.run("experiment/tests/DentistLong.txt");
-      // testScript.run("experiment/tests/Financial.txt");
-      // testScript.run("experiment/tests/CarRental.txt");
-      // testScript.run("experiment/tests/order.txt");
-      // testScript.run("experiment/tests/InsuranceLong.txt");
-      // testScript.run("experiment/tests/Birthday.txt");
-      // testScript.run("experiment/tests/Passport.txt");
-      // testScript.run("experiment/tests/WaitingList.txt");
-      // testScript.run("experiment/tests/Phone.txt");
-      // testScript.run("experiment/tests/Pool.txt");
-      // testScript.run("experiment/tests/23.txt");
-      // testScript.run("experiment/tests/24.txt");
-      // testScript.run("experiment/tests/25.txt");
-      // testScript.run("experiment/tests/26.txt");
-      // testScript.run("experiment/tests/27.txt");
-      // testScript.run("experiment/tests/28.txt");
-      // testScript.run("experiment/tests/29.txt");
-      // testScript.run("experiment/tests/30.txt");
+      experiment.run("experiment/tests/CanadaLong.txt"); // 1
+      // testScript.run("experiment/tests/CatLong.txt"); // 2
+      // testScript.run("experiment/tests/OnlineShoppingLong.txt"); // 3
+      // testScript.run("experiment/tests/18-Appointment.txt"); // 4
+      // testScript.run("experiment/tests/AccountLong.txt"); // 5
+      // testScript.run("experiment/tests/AgeLong.txt"); // 6
+      // testScript.run("experiment/tests/TravellersLong.txt"); // 7
+      // testScript.run("experiment/tests/Flower.txt"); // 8
+      // testScript.run("experiment/tests/ReorderLong.txt"); // 9
+      // testScript.run("experiment/tests/Cook.txt"); // 10
+      // testScript.run("experiment/tests/MyCart.txt"); // 11
+      // testScript.run("experiment/tests/TestNumber.txt"); // 12
+      // testScript.run("experiment/tests/DentistLong.txt"); // 13
+      // testScript.run("experiment/tests/Financial.txt"); // 14
+      // testScript.run("experiment/tests/CarRental.txt"); // 15
+      // testScript.run("experiment/tests/order.txt"); // 16
+      // testScript.run("experiment/tests/InsuranceLong.txt"); // 17
+      // testScript.run("experiment/tests/Birthday.txt"); // 18
+      // testScript.run("experiment/tests/Passport.txt"); // 19
+      // testScript.run("experiment/tests/WaitingList.txt"); // 20
+      // testScript.run("experiment/tests/Phone.txt"); // 21
+      // testScript.run("experiment/tests/Pool.txt"); // 22
+      // testScript.run("experiment/tests/23.txt"); // 23
+      // testScript.run("experiment/tests/24.txt"); // 24
+      // testScript.run("experiment/tests/25.txt"); // 25
+      // testScript.run("experiment/tests/26.txt"); // 26
+      // testScript.run("experiment/tests/27.txt"); // 27
+      // testScript.run("experiment/tests/28.txt"); // 28
+      // testScript.run("experiment/tests/29.txt"); // 29
+      // testScript.run("experiment/tests/30.txt"); // 30
 
       // testScript.run("experiment/tests/faqforge1.txt", "http://faqforge.dev.10.211.128.220.xip.io/clear.php", false,
       // false);
@@ -541,15 +464,11 @@ public class TestScript {
       // false,
       // false);
 
-      testScript.finish();
+      experiment.finish();
     } catch (Exception e) {
-      testScript.stop();
+      experiment.stop();
       e.printStackTrace();
     }
 
-  }
-
-  private void setAutomate(boolean b) {
-    this.doAutomation = b;
   }
 }
