@@ -19,6 +19,8 @@ Build and Run
 
 Please uncomment lines in `main` method of `Main.java` to run for the other test cases. (Currently, only the first 'short' test case is uncommented.)
 
+During the execution, logs for a test case will be appended to a log file (e.g., logs for 'experiment/tests/CanadaLong.txt' will be stored in 'experiment/tests/CanadaLong.log').
+
 You may need FireFox web browser to run this tool and the tool was tested in OSX 10.10 (Yosemite).
 
 
