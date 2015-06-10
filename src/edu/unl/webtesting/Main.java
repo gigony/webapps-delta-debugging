@@ -385,37 +385,39 @@ public class Main {
     try {
       experiment.init();
 
-      experiment.run("experiment/tests/CanadaLong.txt"); // 1
-      // testScript.run("experiment/tests/CatLong.txt"); // 2
-      // testScript.run("experiment/tests/OnlineShoppingLong.txt"); // 3
-      // testScript.run("experiment/tests/18-Appointment.txt"); // 4
-      // testScript.run("experiment/tests/AccountLong.txt"); // 5
-      // testScript.run("experiment/tests/AgeLong.txt"); // 6
-      // testScript.run("experiment/tests/TravellersLong.txt"); // 7
-      // testScript.run("experiment/tests/Flower.txt"); // 8
-      // testScript.run("experiment/tests/ReorderLong.txt"); // 9
-      // testScript.run("experiment/tests/Cook.txt"); // 10
-      // testScript.run("experiment/tests/MyCart.txt"); // 11
-      // testScript.run("experiment/tests/TestNumber.txt"); // 12
-      // testScript.run("experiment/tests/DentistLong.txt"); // 13
-      // testScript.run("experiment/tests/Financial.txt"); // 14
-      // testScript.run("experiment/tests/CarRental.txt"); // 15
-      // testScript.run("experiment/tests/order.txt"); // 16
-      // testScript.run("experiment/tests/InsuranceLong.txt"); // 17
-      // testScript.run("experiment/tests/Birthday.txt"); // 18
-      // testScript.run("experiment/tests/Passport.txt"); // 19
-      // testScript.run("experiment/tests/WaitingList.txt"); // 20
-      // testScript.run("experiment/tests/Phone.txt"); // 21
-      // testScript.run("experiment/tests/Pool.txt"); // 22
-      // testScript.run("experiment/tests/23.txt"); // 23
-      // testScript.run("experiment/tests/24.txt"); // 24
-      // testScript.run("experiment/tests/25.txt"); // 25
-      // testScript.run("experiment/tests/26.txt"); // 26
-      // testScript.run("experiment/tests/27.txt"); // 27
-      // testScript.run("experiment/tests/28.txt"); // 28
-      // testScript.run("experiment/tests/29.txt"); // 29
-      // testScript.run("experiment/tests/30.txt"); // 30
+      experiment.run("experiment/tests/CanadaLong.txt");
+      // // The followings are tests for other object applications (test numbers are not ordered)
+      // testScript.run("experiment/tests/CatLong.txt");
+      // testScript.run("experiment/tests/OnlineShoppingLong.txt"); 
+      // testScript.run("experiment/tests/18-Appointment.txt"); 
+      // testScript.run("experiment/tests/AccountLong.txt"); 
+      // testScript.run("experiment/tests/AgeLong.txt"); 
+      // testScript.run("experiment/tests/TravellersLong.txt");
+      // testScript.run("experiment/tests/Flower.txt"); 
+      // testScript.run("experiment/tests/ReorderLong.txt"); 
+      // testScript.run("experiment/tests/Cook.txt"); 
+      // testScript.run("experiment/tests/MyCart.txt"); 
+      // testScript.run("experiment/tests/TestNumber.txt"); 
+      // testScript.run("experiment/tests/DentistLong.txt");
+      // testScript.run("experiment/tests/Financial.txt"); 
+      // testScript.run("experiment/tests/CarRental.txt"); 
+      // testScript.run("experiment/tests/order.txt"); 
+      // testScript.run("experiment/tests/InsuranceLong.txt"); 
+      // testScript.run("experiment/tests/Birthday.txt"); 
+      // testScript.run("experiment/tests/Passport.txt"); 
+      // testScript.run("experiment/tests/WaitingList.txt"); 
+      // testScript.run("experiment/tests/Phone.txt"); 
+      // testScript.run("experiment/tests/Pool.txt"); 
+      // testScript.run("experiment/tests/23.txt"); 
+      // testScript.run("experiment/tests/24.txt"); 
+      // testScript.run("experiment/tests/25.txt"); 
+      // testScript.run("experiment/tests/26.txt"); 
+      // testScript.run("experiment/tests/27.txt"); 
+      // testScript.run("experiment/tests/28.txt"); 
+      // testScript.run("experiment/tests/29.txt"); 
+      // testScript.run("experiment/tests/30.txt"); 
 
+      // // Tests for large applications
       // testScript.run("experiment/tests/faqforge1.txt", "http://faqforge.dev.10.211.128.220.xip.io/clear.php", false,
       // false);
       // testScript.run("experiment/tests/faqforge2.txt", "http://faqforge.dev.10.211.128.220.xip.io/clear.php", false,
